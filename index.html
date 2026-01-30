@@ -162,6 +162,11 @@
             <br>
             <p class="copyright">&copy; 2026 Regolith Mining. Ad Astra.</p>
         </div>
+        <div id="deploy-status" style="margin-top: 30px; font-size: 0.7rem; color: #444; border-top: 1px solid #222; padding-top: 10px;">
+    <p>System Version: <span id="deploy-version">Loading...</span></p>
+    <p>Last Deployed: <span id="deploy-date">Checking...</span></p>
+    <p>Operator: <span id="deploy-author">...</span></p>
+</div>
     </footer>
 
     <script>
@@ -172,5 +177,39 @@
             nav.classList.toggle('nav-active');
         });
     </script>
+<script>
+    // CONFIGURATION: Change these to match your GitHub details
+    const githubUsername = 'andreasbjornsund-hub'; 
+    const githubRepo = 'regolithmining.com'; // Check your GitHub URL to confirm this name
+
+    // Fetch latest commit data from GitHub API
+    fetch(`https://api.github.com/repos/${githubUsername}/${githubRepo}/commits?per_page=1`)
+    .then(response => response.json())
+    .then(data => {
+        const commit = data[0];
+        
+        // 1. Get the "Version" (First 7 letters of the unique ID)
+        const version = commit.sha.substring(0, 7);
+        
+        // 2. Get the Date (formatted nicely)
+        const dateObj = new Date(commit.commit.author.date);
+        const dateString = dateObj.toLocaleDateString('en-US', { 
+            year: 'numeric', month: 'short', day: 'numeric', 
+            hour: '2-digit', minute: '2-digit' 
+        });
+
+        // 3. Get the Author
+        const author = commit.commit.author.name;
+
+        // Update the HTML
+        document.getElementById('deploy-version').innerText = `v.${version}`;
+        document.getElementById('deploy-date').innerText = dateString;
+        document.getElementById('deploy-author').innerText = author;
+    })
+    .catch(error => {
+        console.error('Error fetching deploy status:', error);
+        document.getElementById('deploy-status').style.display = 'none'; // Hide if fails
+    });
+</script>
 </body>
 </html>
