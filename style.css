@@ -208,3 +208,123 @@ footer {
     .grid-2 { grid-template-columns: 1fr; }
     .reverse { display: flex; flex-direction: column-reverse; }
 }
+
+/* =========================
+   SPACEX STYLE CAROUSEL
+   ========================= */
+
+/* Update Global Font to match SpaceX style */
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Carousel Layout */
+.carousel-section {
+    background-color: #000;
+    padding: 60px 0;
+    border-bottom: 1px solid #222;
+    overflow: hidden; /* Hides horizontal scrollbar */
+}
+
+.carousel-header {
+    padding: 0 5%;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-header h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.carousel-header p {
+    color: #888;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* The Scrolling Container */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Makes items snap into place */
+    gap: 20px;
+    padding: 0 5%; /* Align with site width */
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+/* Individual Slides */
+.carousel-item {
+    min-width: 80vw; /* On mobile, show mostly one image */
+    height: 60vh;
+    position: relative;
+    scroll-snap-align: center;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #111;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(110%); /* Maintain your B&W theme */
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Hover Effect: Bring back color slightly, like SpaceX */
+.carousel-item:hover img {
+    filter: grayscale(0%) contrast(100%);
+    transform: scale(1.03);
+}
+
+/* Caption Overlay */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 20px;
+    pointer-events: none; /* Let clicks pass through */
+}
+
+.caption h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.caption p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Desktop sizing */
+@media screen and (min-width: 768px) {
+    .carousel-item {
+        min-width: 45vw; /* Show 2 images at once on desktop */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .carousel-item {
+        min-width: 30vw; /* Show 3 images at once on large screens */
+    }
+}
