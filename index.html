@@ -6,6 +6,61 @@
     <title>Regolith Mining | Lunar Extraction Operations</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
+<style>
+    /* === MOBILE MENU FIX === */
+    /* 1. Hide the hamburger on desktop */
+    .burger { display: none; cursor: pointer; }
+    .burger div { width: 25px; height: 3px; background-color: white; margin: 5px; transition: all 0.3s ease; }
+
+    /* 2. Show hamburger & hide menu on mobile */
+    @media screen and (max-width: 768px) {
+        body { overflow-x: hidden; } /* Stop side-scrolling */
+        
+        .nav-links {
+            position: fixed; /* Lock it to the screen */
+            right: 0px;
+            height: 100vh;
+            top: 0;
+            background-color: #000000; /* Solid Black */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center items vertically */
+            width: 100%; /* Full screen width */
+            transform: translateX(100%); /* Push it off-screen to the right */
+            transition: transform 0.4s ease-in-out;
+            z-index: 998;
+            padding-bottom: 50px;
+        }
+
+        .nav-links li { 
+            opacity: 1; 
+            margin: 25px 0; 
+        }
+
+        .nav-links a {
+            font-size: 1.5rem; /* Make text bigger on mobile */
+        }
+
+        .burger { 
+            display: block !important; 
+            z-index: 999; /* Sit on top of the menu */
+            position: absolute;
+            right: 25px;
+            top: 25px;
+        }
+
+        /* 3. The class that JavaScript adds to show the menu */
+        .nav-active {
+            transform: translateX(0%) !important; /* Bring it back on screen */
+        }
+        
+        /* Optional: Turn burger into X when open */
+        .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+        .toggle .line2 { opacity: 0; }
+        .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+    }
+</style>
 </head>
 <body>
 
@@ -210,6 +265,22 @@
         console.error('Error fetching deploy status:', error);
         document.getElementById('deploy-status').style.display = 'none'; // Hide if fails
     });
+</script>
+<script>
+    // MOBILE MENU LOGIC
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    if (burger) {
+        burger.addEventListener('click', () => {
+            // Toggle Menu
+            nav.classList.toggle('nav-active');
+            
+            // Animate Burger (Turn into X)
+            burger.classList.toggle('toggle');
+        });
+    }
 </script>
 </body>
 </html>
