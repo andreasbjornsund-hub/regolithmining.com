@@ -262,6 +262,56 @@
         </div>
     </section>
 
+    <section id="contact-form" class="container">
+        <h2>Get In Touch</h2>
+        <p class="lead">Inquiries from institutional partners, researchers, and press.</p>
+
+        <div class="form-container">
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="Norway">Norway</option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="France">France</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loading" style="display:none;">Sending...</span>
+                </button>
+
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
     <footer id="contact">
         <div class="container">
             <h2 data-translate="footer.title">Contact Operations</h2>
@@ -817,6 +867,81 @@ langOptions.forEach(option => {
 
 // Initialize with saved or default language
 updateLanguage(currentLang);
+</script>
+
+<script>
+// =========================
+// CONTACT FORM SUBMISSION
+// =========================
+
+// Formspree endpoint for contact form submissions
+const SCRIPT_URL = 'https://formspree.io/f/mjgrqyrr';
+
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+    const formMessage = document.getElementById('formMessage');
+
+    // Disable button and show loading
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+    formMessage.style.display = 'none';
+
+    // Get form data
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        country: document.getElementById('country').value,
+        message: document.getElementById('message').value || 'No message',
+        timestamp: new Date().toISOString(),
+        browser: navigator.userAgent,
+        language: navigator.language
+    };
+
+    try {
+        // Get IP address (using a free API)
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        formData.ip = ipData.ip;
+    } catch (error) {
+        formData.ip = 'Unable to detect';
+    }
+
+    try {
+        // Send to Formspree
+        const response = await fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+
+        // Show success message
+        formMessage.className = 'form-message success';
+        formMessage.textContent = `Thank you, ${formData.name}! Your message has been received. We'll contact you at ${formData.email} soon.`;
+        formMessage.style.display = 'block';
+
+        // Reset form
+        document.getElementById('contactForm').reset();
+
+    } catch (error) {
+        // Show error message
+        formMessage.className = 'form-message error';
+        formMessage.textContent = 'Sorry, something went wrong. Please try again or email us directly at andreas.bjornsund@gmail.com';
+        formMessage.style.display = 'block';
+    } finally {
+        // Re-enable button
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+    }
+});
 </script>
 </body>
 </html>
