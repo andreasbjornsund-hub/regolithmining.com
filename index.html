@@ -97,6 +97,7 @@
             <li><a href="#history-gallery" data-translate="nav.legacy">Legacy</a></li>
             <li><a href="#when" data-translate="nav.when">When</a></li>
             <li><a href="#technology" data-translate="nav.technology">Technology</a></li>
+            <li><a href="#blog" data-translate="nav.blog">Blog</a></li>
             <li><a href="#invest" data-translate="nav.invest">Invest</a></li>
             <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
         </ul>
@@ -264,6 +265,60 @@
         </div>
     </section>
 
+    <section id="blog" class="container">
+        <h2 data-translate="blog.title">Mission Log</h2>
+        <p class="lead" data-translate="blog.subtitle">Insights from the frontier of lunar industrialization.</p>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-date" data-translate="blog.post1.date">December 2025</div>
+                <h3 data-translate="blog.post1.title">Lunar History: From Apollo to Tomorrow</h3>
+                <p data-translate="blog.post1.excerpt">The Apollo program wasn't just exploration—it was reconnaissance. Every sample collected, every footprint made, every photograph taken provided critical data for future industrial operations. Today, we're converting that legacy into actionable mining infrastructure.</p>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-date" data-translate="blog.post2.date">November 2025</div>
+                <h3 data-translate="blog.post2.title">The Economics of Space Mining</h3>
+                <p data-translate="blog.post2.excerpt">Rare earth elements critical for modern technology are becoming scarce on Earth. The Moon contains vast reserves of Helium-3, titanium, and other materials. The economics are simple: high upfront cost, unlimited return horizon, zero environmental impact on Earth.</p>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-date" data-translate="blog.post3.date">October 2025</div>
+                <h3 data-translate="blog.post3.title">Robotic Pioneers: First Steps to Lunar Industry</h3>
+                <p data-translate="blog.post3.excerpt">Before humans return, robots pave the way. Autonomous rovers will map mineral deposits, test extraction methods, and establish power generation. Our robotic fleet operates 24/7 in the harsh lunar environment, preparing infrastructure for sustained operations.</p>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-date" data-translate="blog.post4.date">September 2025</div>
+                <h3 data-translate="blog.post4.title">Sustainable Space: Zero-Emission Mining</h3>
+                <p data-translate="blog.post4.excerpt">Space mining isn't just economically viable—it's environmentally imperative. By moving heavy industry off Earth, we preserve our planet as a garden while accessing unlimited resources. Solar power, vacuum processing, and closed-loop systems make lunar mining truly sustainable.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="partners" class="container bg-darker">
+        <h2 data-translate="partners.title">Technology Heritage</h2>
+        <p class="lead" data-translate="partners.subtitle">Standing on the shoulders of giants.</p>
+
+        <div class="partners-grid">
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <div class="nasa-logo">NASA</div>
+                </div>
+                <h3>NASA</h3>
+                <p data-translate="partners.nasa.desc">Decades of lunar exploration data, mission architecture, and materials science research form the foundation of modern space industrialization. The Apollo program's legacy continues to guide commercial lunar operations.</p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <div class="spacex-logo">SPACEX</div>
+                </div>
+                <h3>SpaceX</h3>
+                <p data-translate="partners.spacex.desc">Reusable launch systems and point-to-point space transport have dramatically reduced the cost of payload delivery. This infrastructure makes lunar mining economically feasible and enables sustained off-world operations.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="contact-form" class="container">
         <h2>Get In Touch</h2>
         <p class="lead">Inquiries from institutional partners, researchers, and press.</p>
@@ -405,6 +460,7 @@ const translations = {
             legacy: "Legacy",
             when: "When",
             technology: "Technology",
+            blog: "Blog",
             invest: "Invest",
             contact: "Contact"
         },
@@ -468,6 +524,40 @@ const translations = {
             desc: "Space mining is a capital-intensive, century-long play. We are accepting inquiries from accredited institutional partners.",
             cta: "Request Deck"
         },
+        blog: {
+            title: "Mission Log",
+            subtitle: "Insights from the frontier of lunar industrialization.",
+            post1: {
+                date: "December 2025",
+                title: "Lunar History: From Apollo to Tomorrow",
+                excerpt: "The Apollo program wasn't just exploration—it was reconnaissance. Every sample collected, every footprint made, every photograph taken provided critical data for future industrial operations. Today, we're converting that legacy into actionable mining infrastructure."
+            },
+            post2: {
+                date: "November 2025",
+                title: "The Economics of Space Mining",
+                excerpt: "Rare earth elements critical for modern technology are becoming scarce on Earth. The Moon contains vast reserves of Helium-3, titanium, and other materials. The economics are simple: high upfront cost, unlimited return horizon, zero environmental impact on Earth."
+            },
+            post3: {
+                date: "October 2025",
+                title: "Robotic Pioneers: First Steps to Lunar Industry",
+                excerpt: "Before humans return, robots pave the way. Autonomous rovers will map mineral deposits, test extraction methods, and establish power generation. Our robotic fleet operates 24/7 in the harsh lunar environment, preparing infrastructure for sustained operations."
+            },
+            post4: {
+                date: "September 2025",
+                title: "Sustainable Space: Zero-Emission Mining",
+                excerpt: "Space mining isn't just economically viable—it's environmentally imperative. By moving heavy industry off Earth, we preserve our planet as a garden while accessing unlimited resources. Solar power, vacuum processing, and closed-loop systems make lunar mining truly sustainable."
+            }
+        },
+        partners: {
+            title: "Technology Heritage",
+            subtitle: "Standing on the shoulders of giants.",
+            nasa: {
+                desc: "Decades of lunar exploration data, mission architecture, and materials science research form the foundation of modern space industrialization. The Apollo program's legacy continues to guide commercial lunar operations."
+            },
+            spacex: {
+                desc: "Reusable launch systems and point-to-point space transport have dramatically reduced the cost of payload delivery. This infrastructure makes lunar mining economically feasible and enables sustained off-world operations."
+            }
+        },
         footer: {
             title: "Contact Operations",
             location: "Oslo, Norway | Lunar Orbit",
@@ -482,6 +572,7 @@ const translations = {
             legacy: "Arv",
             when: "Når",
             technology: "Teknologi",
+            blog: "Blogg",
             invest: "Invester",
             contact: "Kontakt"
         },
@@ -545,6 +636,40 @@ const translations = {
             desc: "Romgruvedrift er et kapitalintensivt, århundrelangt spill. Vi aksepterer henvendelser fra akkrediterte institusjonelle partnere.",
             cta: "Be om Presentasjon"
         },
+        blog: {
+            title: "Oppdragslogg",
+            subtitle: "Innsikt fra grensen av måne­industrialisering.",
+            post1: {
+                date: "Desember 2025",
+                title: "Månehistorie: Fra Apollo til I Morgen",
+                excerpt: "Apollo-programmet var ikke bare utforskning—det var rekognosering. Hver prøve samlet, hvert fotavtrykk laget, hvert fotografi tatt ga kritiske data for fremtidige industrielle operasjoner. I dag konverterer vi den arven til handlingsrettet gruveinfrastruktur."
+            },
+            post2: {
+                date: "November 2025",
+                title: "Økonomien i Romgruvedrift",
+                excerpt: "Sjeldne jordelementer kritiske for moderne teknologi blir stadig knappere på Jorden. Månen inneholder enorme reserver av Helium-3, titanium og andre materialer. Økonomien er enkel: høy forhåndskostnad, ubegrenset avkastningshorisont, null miljøpåvirkning på Jorden."
+            },
+            post3: {
+                date: "Oktober 2025",
+                title: "Robotiske Pionerer: Første Skritt til Måneindustri",
+                excerpt: "Før mennesker returnerer, baner roboter veien. Autonome rovere vil kartlegge mineralforekomster, teste utvinningsmetoder og etablere kraftproduksjon. Vår robotflåte opererer døgnet rundt i det barske månemiljøet, og forbereder infrastruktur for vedvarende operasjoner."
+            },
+            post4: {
+                date: "September 2025",
+                title: "Bærekraftig Rom: Nullutslippsgruvedrift",
+                excerpt: "Romgruvedrift er ikke bare økonomisk levedyktig—det er miljømessig nødvendig. Ved å flytte tungindustri bort fra Jorden, bevarer vi planeten vår som en hage mens vi får tilgang til ubegrensede ressurser. Solkraft, vakuumprosessering og lukkede systemer gjør månegruvedrift virkelig bærekraftig."
+            }
+        },
+        partners: {
+            title: "Teknologiarv",
+            subtitle: "Stående på kjempers skuldre.",
+            nasa: {
+                desc: "Tiår med måne­utforsknings­data, oppdragsarkitektur og materialvitenskapelig forskning danner grunnlaget for moderne romindustrialisering. Apollo-programmets arv fortsetter å veilede kommersielle måneoperasjoner."
+            },
+            spacex: {
+                desc: "Gjenbrukbare oppskytningssystemer og punkt-til-punkt romtransport har dramatisk redusert kostnadene ved nyttelastlevering. Denne infrastrukturen gjør månegruvedrift økonomisk gjennomførbar og muliggjør vedvarende operasjoner utenfor jorden."
+            }
+        },
         footer: {
             title: "Kontakt Operasjoner",
             location: "Oslo, Norge | Månebane",
@@ -559,6 +684,7 @@ const translations = {
             legacy: "Vermächtnis",
             when: "Wann",
             technology: "Technologie",
+            blog: "Blog",
             invest: "Investieren",
             contact: "Kontakt"
         },
@@ -622,6 +748,40 @@ const translations = {
             desc: "Weltraumbergbau ist ein kapitalintensives, jahrhundertelanges Unterfangen. Wir nehmen Anfragen von akkreditierten institutionellen Partnern entgegen.",
             cta: "Präsentation Anfordern"
         },
+        blog: {
+            title: "Missionsprotokoll",
+            subtitle: "Einblicke von der Grenze der Mondindustrialisierung.",
+            post1: {
+                date: "Dezember 2025",
+                title: "Mondgeschichte: Von Apollo bis Morgen",
+                excerpt: "Das Apollo-Programm war nicht nur Erkundung—es war Aufklärung. Jede gesammelte Probe, jeder gemachte Fußabdruck, jedes aufgenommene Foto lieferte kritische Daten für zukünftige industrielle Operationen. Heute verwandeln wir dieses Erbe in umsetzbare Bergbau-Infrastruktur."
+            },
+            post2: {
+                date: "November 2025",
+                title: "Die Ökonomie des Weltraumbergbaus",
+                excerpt: "Seltene Erden, die für moderne Technologie kritisch sind, werden auf der Erde knapp. Der Mond enthält riesige Reserven an Helium-3, Titan und anderen Materialien. Die Ökonomie ist einfach: hohe Anfangskosten, unbegrenzter Renditehorizont, null Umweltbelastung auf der Erde."
+            },
+            post3: {
+                date: "Oktober 2025",
+                title: "Robotische Pioniere: Erste Schritte zur Mondindustrie",
+                excerpt: "Bevor Menschen zurückkehren, ebnen Roboter den Weg. Autonome Rover werden Mineralvorkommen kartieren, Abbaumethoden testen und Stromerzeugung etablieren. Unsere Roboterflotte arbeitet rund um die Uhr in der rauen Mondumgebung und bereitet die Infrastruktur für nachhaltige Operationen vor."
+            },
+            post4: {
+                date: "September 2025",
+                title: "Nachhaltiger Weltraum: Emissionsfreier Bergbau",
+                excerpt: "Weltraumbergbau ist nicht nur wirtschaftlich tragfähig—er ist ökologisch zwingend erforderlich. Indem wir Schwerindustrie von der Erde verlagern, bewahren wir unseren Planeten als Garten, während wir auf unbegrenzte Ressourcen zugreifen. Solarenergie, Vakuumverarbeitung und geschlossene Systeme machen Mondbergbau wirklich nachhaltig."
+            }
+        },
+        partners: {
+            title: "Technologisches Erbe",
+            subtitle: "Auf den Schultern von Riesen stehend.",
+            nasa: {
+                desc: "Jahrzehnte von Mondforschungsdaten, Missionsarchitektur und Materialwissenschaftsforschung bilden die Grundlage für moderne Raumfahrtindustrialisierung. Das Vermächtnis des Apollo-Programms leitet weiterhin kommerzielle Mondoperationen."
+            },
+            spacex: {
+                desc: "Wiederverwendbare Startsysteme und Punkt-zu-Punkt-Raumtransport haben die Kosten für die Nutzlastlieferung dramatisch reduziert. Diese Infrastruktur macht Mondbergbau wirtschaftlich machbar und ermöglicht nachhaltige außerirdische Operationen."
+            }
+        },
         footer: {
             title: "Kontakt Operations",
             location: "Oslo, Norwegen | Mondumlaufbahn",
@@ -636,6 +796,7 @@ const translations = {
             legacy: "Arv",
             when: "När",
             technology: "Teknologi",
+            blog: "Blogg",
             invest: "Investera",
             contact: "Kontakt"
         },
@@ -699,6 +860,40 @@ const translations = {
             desc: "Rymdgruvdrift är en kapitalintensiv, sekel-lång satsning. Vi tar emot förfrågningar från ackrediterade institutionella partners.",
             cta: "Begär Presentation"
         },
+        blog: {
+            title: "Uppdragslogg",
+            subtitle: "Insikter från gränsen av månindustrialisering.",
+            post1: {
+                date: "December 2025",
+                title: "Månhistoria: Från Apollo till I Morgon",
+                excerpt: "Apollo-programmet var inte bara utforskning—det var rekognoscering. Varje insamlat prov, varje gjort fotavtryck, varje taget fotografi gav kritisk data för framtida industriella operationer. Idag omvandlar vi det arvet till handlingskraftig gruvinfrastruktur."
+            },
+            post2: {
+                date: "November 2025",
+                title: "Ekonomin i Rymd­gruvdrift",
+                excerpt: "Sällsynta jordartsmetaller kritiska för modern teknologi håller på att ta slut på Jorden. Månen innehåller enorma reserver av Helium-3, titan och andra material. Ekonomin är enkel: hög startkostnad, obegränsad avkastningshorisont, noll miljöpåverkan på Jorden."
+            },
+            post3: {
+                date: "Oktober 2025",
+                title: "Robotiska Pionjärer: Första Stegen till Månindustri",
+                excerpt: "Innan människor återvänder banar robotar vägen. Autonoma rovers kommer att kartlägga mineralfyndigheter, testa utvinningsmetoder och etablera kraftproduktion. Vår robotflotta arbetar dygnet runt i den hårda månmiljön och förbereder infrastruktur för varaktiga operationer."
+            },
+            post4: {
+                date: "September 2025",
+                title: "Hållbart Rymd: Nollutsläpps­gruvdrift",
+                excerpt: "Rymdgruvdrift är inte bara ekonomiskt livskraftig—det är miljömässigt nödvändigt. Genom att flytta tung industri från Jorden bevarar vi vår planet som en trädgård medan vi får tillgång till obegränsade resurser. Solenergi, vakuumbearbetning och slutna system gör mångruvdrift verkligt hållbar."
+            }
+        },
+        partners: {
+            title: "Teknologiskt Arv",
+            subtitle: "Stående på jättars axlar.",
+            nasa: {
+                desc: "Decennier av månforskningsdata, uppdragsarkitektur och materialvetenskaplig forskning utgör grunden för modern rymdindustrialisering. Apollo-programmets arv fortsätter att vägleda kommersiella månoperationer."
+            },
+            spacex: {
+                desc: "Återanvändbara uppskjutningssystem och punkt-till-punkt rymdtransport har dramatiskt minskat kostnaderna för nyttolastleverans. Denna infrastruktur gör mångruvdrift ekonomiskt genomförbar och möjliggör varaktiga utomjordiska operationer."
+            }
+        },
         footer: {
             title: "Kontakta Operationer",
             location: "Oslo, Norge | Månbana",
@@ -713,6 +908,7 @@ const translations = {
             legacy: "Erfgoed",
             when: "Wanneer",
             technology: "Technologie",
+            blog: "Blog",
             invest: "Investeren",
             contact: "Contact"
         },
@@ -775,6 +971,40 @@ const translations = {
             title: "Kapitaal voor de Kosmos",
             desc: "Ruimtemijnbouw is een kapitaalintensief, eeuwenlang spel. Wij accepteren aanvragen van geaccrediteerde institutionele partners.",
             cta: "Presentatie Aanvragen"
+        },
+        blog: {
+            title: "Missielogboek",
+            subtitle: "Inzichten van de grens van maan­industrialisatie.",
+            post1: {
+                date: "December 2025",
+                title: "Maangeschiedenis: Van Apollo tot Morgen",
+                excerpt: "Het Apollo-programma was niet alleen verkenning—het was verkenning. Elk verzameld monster, elke gemaakte voetstap, elke gemaakte foto leverde cruciale gegevens voor toekomstige industriële operaties. Vandaag zetten we dat erfgoed om in uitvoerbare mijnbouwinfrastructuur."
+            },
+            post2: {
+                date: "November 2025",
+                title: "De Economie van Ruimte­mijnbouw",
+                excerpt: "Zeldzame aardmetalen die cruciaal zijn voor moderne technologie raken schaars op aarde. De maan bevat enorme reserves van Helium-3, titanium en andere materialen. De economie is eenvoudig: hoge voorafgaande kosten, onbeperkte rendementshorizon, nul milieu-impact op aarde."
+            },
+            post3: {
+                date: "Oktober 2025",
+                title: "Robotische Pioniers: Eerste Stappen naar Maanindustrie",
+                excerpt: "Voordat mensen terugkeren, effenen robots de weg. Autonome rovers zullen mineraalafzettingen in kaart brengen, winningsmethoden testen en energieproductie opzetten. Onze robotvloot werkt 24/7 in de barre maandomgeving en bereidt infrastructuur voor duurzame operaties voor."
+            },
+            post4: {
+                date: "September 2025",
+                title: "Duurzame Ruimte: Nulemissie Mijnbouw",
+                excerpt: "Ruimtemijnbouw is niet alleen economisch levensvatbaar—het is ecologisch noodzakelijk. Door zware industrie van de aarde te verplaatsen, behouden we onze planeet als een tuin terwijl we toegang krijgen tot onbeperkte middelen. Zonne-energie, vacuümverwerking en gesloten systemen maken maanmijnbouw echt duurzaam."
+            }
+        },
+        partners: {
+            title: "Technologische Erfenis",
+            subtitle: "Staand op de schouders van reuzen.",
+            nasa: {
+                desc: "Decennia van maanverkenningsgegevens, missie-architectuur en materiaalwetenschappelijk onderzoek vormen de basis voor moderne ruimte-industrialisatie. De erfenis van het Apollo-programma blijft commerciële maanoperaties leiden."
+            },
+            spacex: {
+                desc: "Herbruikbare lanceringssystemen en punt-tot-punt ruimtevervoer hebben de kosten van nuttige lastlevering dramatisch verlaagd. Deze infrastructuur maakt maanmijnbouw economisch haalbaar en maakt duurzame buitenaardse operaties mogelijk."
+            }
         },
         footer: {
             title: "Contact Operaties",
