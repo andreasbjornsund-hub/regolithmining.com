@@ -190,8 +190,8 @@ nav {
    ========================= */
 .hero {
     height: 100vh;
-    /* High Res NASA-style Moon Image */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop'); 
+    /* Fallback background image if video doesn't load */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1509869175650-a1d97972541a?q=80&w=2072&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -199,6 +199,66 @@ nav {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Video background */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
+}
+
+/* Dark overlay on video */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Ensure content is above video */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* CSS-only animation (Ken Burns effect) */
+@keyframes slowZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+/* Apply animation to hero background */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background: url('https://images.unsplash.com/photo-1509869175650-a1d97972541a?q=80&w=2072&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    animation: slowZoom 30s ease-in-out infinite alternate;
+    z-index: 0;
 }
 
 .hero-content h1 {
