@@ -26,11 +26,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: center; /* Center items vertically */
-            width: 100%; /* Full screen width */
+            width: 75%; /* Takes up 75% of screen, leaves 25% visible */
+            max-width: 400px; /* Don't get too wide on tablets */
             transform: translateX(100%); /* Push it off-screen to the right */
             transition: transform 0.4s ease-in-out;
             z-index: 998;
             padding-bottom: 50px;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.5); /* Shadow for depth */
         }
 
         .nav-links li {
