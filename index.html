@@ -91,7 +91,10 @@
 <body>
 
     <nav>
-        <a href="#" class="logo">REGOLITH MINING</a>
+        <a href="#" class="logo">
+            <span class="logo-full">REGOLITH MINING</span>
+            <span class="logo-short">REGOLITH</span>
+        </a>
         <ul class="nav-links">
             <li><a href="#about" data-translate="nav.about">About</a></li>
             <li><a href="#history-gallery" data-translate="nav.legacy">Legacy</a></li>
@@ -441,15 +444,34 @@
     // MOBILE MENU LOGIC
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
+    const navLinks = document.querySelectorAll('.nav-links a');
 
     if (burger) {
+        // Toggle menu when clicking hamburger
         burger.addEventListener('click', () => {
-            // Toggle Menu
             nav.classList.toggle('nav-active');
-
-            // Animate Burger (Turn into X)
             burger.classList.toggle('toggle');
+            // Prevent body scroll when menu is open
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking a nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking outside (but not on language dropdown)
+        document.addEventListener('click', (e) => {
+            const langSelector = document.querySelector('.language-selector');
+            if (!nav.contains(e.target) && !burger.contains(e.target) && !langSelector.contains(e.target)) {
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+                document.body.classList.remove('menu-open');
+            }
         });
     }
 </script>
