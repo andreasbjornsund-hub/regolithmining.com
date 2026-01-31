@@ -15,7 +15,7 @@
     /* 2. Show hamburger & hide menu on mobile */
     @media screen and (max-width: 768px) {
         body { overflow-x: hidden; } /* Stop side-scrolling */
-        
+
         .nav-links {
             position: fixed; /* Lock it to the screen */
             right: 0px;
@@ -33,17 +33,41 @@
             padding-bottom: 50px;
         }
 
-        .nav-links li { 
-            opacity: 1; 
-            margin: 25px 0; 
+        .nav-links li {
+            opacity: 1;
+            margin: 25px 0;
         }
 
         .nav-links a {
             font-size: 1.5rem; /* Make text bigger on mobile */
         }
 
-        .burger { 
-            display: block !important; 
+        /* Language selector on mobile - inside menu */
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001;
+        }
+
+        .lang-dropdown-btn {
+            padding: 10px 14px;
+            font-size: 0.85rem;
+        }
+
+        .lang-dropdown-menu {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        .lang-dropdown-menu.active {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .burger {
+            display: block !important;
             z-index: 999; /* Sit on top of the menu */
             position: absolute;
             right: 25px;
@@ -54,7 +78,7 @@
         .nav-active {
             transform: translateX(0%) !important; /* Bring it back on screen */
         }
-        
+
         /* Optional: Turn burger into X when open */
         .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
         .toggle .line2 { opacity: 0; }
@@ -67,13 +91,42 @@
     <nav>
         <div class="logo">REGOLITH MINING</div>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#history-gallery">Legacy</a></li>
-            <li><a href="#when">When</a></li>
-            <li><a href="#technology">Technology</a></li>
-            <li><a href="#invest">Invest</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" data-translate="nav.about">About</a></li>
+            <li><a href="#history-gallery" data-translate="nav.legacy">Legacy</a></li>
+            <li><a href="#when" data-translate="nav.when">When</a></li>
+            <li><a href="#technology" data-translate="nav.technology">Technology</a></li>
+            <li><a href="#invest" data-translate="nav.invest">Invest</a></li>
+            <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
         </ul>
+        <div class="language-selector">
+            <button class="lang-dropdown-btn" id="langDropdownBtn">
+                <span class="flag">🇬🇧</span>
+                <span class="lang-code">EN</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="lang-dropdown-menu" id="langDropdownMenu">
+                <button class="lang-option" data-lang="en" data-flag="🇬🇧">
+                    <span class="flag">🇬🇧</span>
+                    <span class="lang-name">English</span>
+                </button>
+                <button class="lang-option" data-lang="no" data-flag="🇳🇴">
+                    <span class="flag">🇳🇴</span>
+                    <span class="lang-name">Norsk</span>
+                </button>
+                <button class="lang-option" data-lang="de" data-flag="🇩🇪">
+                    <span class="flag">🇩🇪</span>
+                    <span class="lang-name">Deutsch</span>
+                </button>
+                <button class="lang-option" data-lang="sv" data-flag="🇸🇪">
+                    <span class="flag">🇸🇪</span>
+                    <span class="lang-name">Svenska</span>
+                </button>
+                <button class="lang-option" data-lang="nl" data-flag="🇳🇱">
+                    <span class="flag">🇳🇱</span>
+                    <span class="lang-name">Nederlands</span>
+                </button>
+            </div>
+        </div>
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -83,19 +136,19 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>The Next Frontier is Grey.</h1>
-            <p>Sustainable resource extraction for the cis-lunar economy.</p>
-            <a href="#invest" class="btn">View Prospectus</a>
+            <h1 data-translate="hero.title">The Next Frontier is Grey.</h1>
+            <p data-translate="hero.subtitle">Sustainable resource extraction for the cis-lunar economy.</p>
+            <a href="#invest" class="btn" data-translate="hero.cta">View Prospectus</a>
         </div>
     </header>
 
     <section id="about" class="container">
-        <h2>The Mission</h2>
-        <p class="lead">We are looking up.</p>
+        <h2 data-translate="about.title">The Mission</h2>
+        <p class="lead" data-translate="about.tagline">We are looking up.</p>
         <div class="grid-2">
             <div>
-                <p>Earth is finite. The Moon is the gateway to the solar system. Regolith Mining Corp is dedicated to the exploration, categorization, and eventual extraction of Helium-3 and rare earth metals from the lunar surface.</p>
-                <p>We believe that heavy industry belongs in orbit, preserving Earth as a garden while we harvest the dead rocks of the moon to power our future.</p>
+                <p data-translate="about.p1">Earth is finite. The Moon is the gateway to the solar system. Regolith Mining Corp is dedicated to the exploration, categorization, and eventual extraction of Helium-3 and rare earth metals from the lunar surface.</p>
+                <p data-translate="about.p2">We believe that heavy industry belongs in orbit, preserving Earth as a garden while we harvest the dead rocks of the moon to power our future.</p>
             </div>
             <div class="image-box">
                 <img src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?q=80&w=1600&auto=format&fit=crop" alt="Lunar Surface Close up">
@@ -105,16 +158,16 @@
 
     <section id="history-gallery" class="carousel-section">
         <div class="carousel-header">
-            <h2>LUNAR LEGACY</h2>
-            <p>The path was paved 50 years ago.</p>
+            <h2 data-translate="carousel.title">LUNAR LEGACY</h2>
+            <p data-translate="carousel.subtitle">The path was paved 50 years ago.</p>
         </div>
-        
+
         <div class="carousel-container">
             <div class="carousel-item">
                 <img src="https://images-assets.nasa.gov/image/as11-40-5903/as11-40-5903~orig.jpg" alt="Buzz Aldrin on the Moon" loading="lazy">
                 <div class="caption">
                     <h3>APOLLO 11</h3>
-                    <p>Aldrin Salutes the Flag</p>
+                    <p data-translate="carousel.img1">Aldrin Salutes the Flag</p>
                 </div>
             </div>
 
@@ -122,7 +175,7 @@
                 <img src="https://images-assets.nasa.gov/image/as08-14-2383/as08-14-2383~orig.jpg" alt="Earthrise from Lunar Orbit" loading="lazy">
                 <div class="caption">
                     <h3>APOLLO 8</h3>
-                    <p>Earthrise</p>
+                    <p data-translate="carousel.img2">Earthrise</p>
                 </div>
             </div>
 
@@ -130,7 +183,7 @@
                 <img src="https://images-assets.nasa.gov/image/as15-88-11901/as15-88-11901~orig.jpg" alt="Lunar Rover at Station 8" loading="lazy">
                 <div class="caption">
                     <h3>APOLLO 15</h3>
-                    <p>Lunar Roving Vehicle</p>
+                    <p data-translate="carousel.img3">Lunar Roving Vehicle</p>
                 </div>
             </div>
 
@@ -138,7 +191,7 @@
                 <img src="https://images-assets.nasa.gov/image/as11-40-5877/as11-40-5877~orig.jpg" alt="Bootprint in Lunar Soil" loading="lazy">
                 <div class="caption">
                     <h3>APOLLO 11</h3>
-                    <p>One Small Step</p>
+                    <p data-translate="carousel.img4">One Small Step</p>
                 </div>
             </div>
 
@@ -146,7 +199,7 @@
                 <img src="https://images-assets.nasa.gov/image/as17-134-20382/as17-134-20382~orig.jpg" alt="Schmitt poses by the flag" loading="lazy">
                 <div class="caption">
                     <h3>APOLLO 17</h3>
-                    <p>The Last Walk</p>
+                    <p data-translate="carousel.img5">The Last Walk</p>
                 </div>
             </div>
         </div>
@@ -158,69 +211,70 @@
                 <img src="https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=1600&auto=format&fit=crop" alt="Apollo Astronaut on Moon">
             </div>
             <div>
-                <h2>Standing on Giants</h2>
-                <p>In 1969, humanity took a small step. Today, we are preparing for the giant leap of industrialization. We honor the Apollo program not just as history, but as the initial survey mission for our operations.</p>
-                <p>The footprint remains untouched. We intend to build the road that leads back to it.</p>
+                <h2 data-translate="legacy.title">Standing on Giants</h2>
+                <p data-translate="legacy.p1">In 1969, humanity took a small step. Today, we are preparing for the giant leap of industrialization. We honor the Apollo program not just as history, but as the initial survey mission for our operations.</p>
+                <p data-translate="legacy.p2">The footprint remains untouched. We intend to build the road that leads back to it.</p>
             </div>
         </div>
     </section>
 
     <section id="when" class="container bg-darker">
-        <h2>Operational Timeline</h2>
+        <h2 data-translate="timeline.title">Operational Timeline</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <h3>Phase 1: Survey</h3>
-                <p>Remote spectral analysis of the South Pole-Aitken basin.</p>
+                <h3 data-translate="timeline.phase1.title">Phase 1: Survey</h3>
+                <p data-translate="timeline.phase1.desc">Remote spectral analysis of the South Pole-Aitken basin.</p>
             </div>
             <div class="timeline-item">
-                <h3>Phase 2: Robotics</h3>
-                <p>Deployment of autonomous rovers for regolith sifting samples.</p>
+                <h3 data-translate="timeline.phase2.title">Phase 2: Robotics</h3>
+                <p data-translate="timeline.phase2.desc">Deployment of autonomous rovers for regolith sifting samples.</p>
             </div>
             <div class="timeline-item">
-                <h3>Phase 3: Extraction</h3>
-                <p>In-situ resource utilization (ISRU) tests and oxygen generation.</p>
+                <h3 data-translate="timeline.phase3.title">Phase 3: Extraction</h3>
+                <p data-translate="timeline.phase3.desc">In-situ resource utilization (ISRU) tests and oxygen generation.</p>
             </div>
         </div>
     </section>
 
     <section id="technology" class="container">
-        <h2>Technology</h2>
+        <h2 data-translate="tech.title">Technology</h2>
         <div class="grid-3">
             <div class="card">
-                <h3>Automated Sifting</h3>
-                <p>Low-gravity conveyor systems designed to process regolith dust without atmosphere.</p>
+                <h3 data-translate="tech.card1.title">Automated Sifting</h3>
+                <p data-translate="tech.card1.desc">Low-gravity conveyor systems designed to process regolith dust without atmosphere.</p>
             </div>
             <div class="card">
-                <h3>Thermal Wadis</h3>
-                <p>Utilizing eternal light peaks for solar power generation.</p>
+                <h3 data-translate="tech.card2.title">Thermal Wadis</h3>
+                <p data-translate="tech.card2.desc">Utilizing eternal light peaks for solar power generation.</p>
             </div>
             <div class="card">
-                <h3>Launch Loops</h3>
-                <p>Electromagnetic acceleration for non-rocket payload delivery to orbit.</p>
+                <h3 data-translate="tech.card3.title">Launch Loops</h3>
+                <p data-translate="tech.card3.desc">Electromagnetic acceleration for non-rocket payload delivery to orbit.</p>
             </div>
         </div>
     </section>
 
     <section id="invest" class="hero-small">
         <div class="hero-content">
-            <h2>Capital for the Cosmos</h2>
-            <p>Space mining is a capital-intensive, century-long play. We are accepting inquiries from accredited institutional partners.</p>
-            <a href="mailto:andreas.bjornsund@gmail.com" class="btn btn-outline">Request Deck</a>
+            <h2 data-translate="invest.title">Capital for the Cosmos</h2>
+            <p data-translate="invest.desc">Space mining is a capital-intensive, century-long play. We are accepting inquiries from accredited institutional partners.</p>
+            <a href="mailto:andreas.bjornsund@gmail.com" class="btn btn-outline" data-translate="invest.cta">Request Deck</a>
         </div>
     </section>
 
     <footer id="contact">
         <div class="container">
-            <h2>Contact Operations</h2>
-            <p>Oslo, Norway | Lunar Orbit</p>
+            <h2 data-translate="footer.title">Contact Operations</h2>
+            <p data-translate="footer.location">Oslo, Norway | Lunar Orbit</p>
             <p><a href="mailto:andreas.bjornsund@gmail.com">andreas.bjornsund@gmail.com</a></p>
             <br>
             <p class="copyright">&copy; 2026 Regolith Mining. Ad Astra.</p>
+            <p style="margin-top: 20px; font-size: 0.7rem; color: #555;">Made with Claude Sonnet 4.5</p>
         </div>
         <div id="deploy-status" style="margin-top: 30px; font-size: 0.7rem; color: #444; border-top: 1px solid #222; padding-top: 10px;">
-    <p>System Version: <span id="deploy-version">Loading...</span></p>
-    <p>Last Deployed: <span id="deploy-date">Checking...</span></p>
-    <p>Operator: <span id="deploy-author">...</span></p>
+    <p><span data-translate="footer.version">System Version</span>: <span id="deploy-version">Loading...</span></p>
+    <p><span data-translate="footer.deployed">Last Deployed</span>: <span id="deploy-date">Checking...</span></p>
+    <p><span data-translate="footer.operator">Operator</span>: <span id="deploy-author">...</span></p>
 </div>
     </footer>
 
@@ -276,11 +330,493 @@
         burger.addEventListener('click', () => {
             // Toggle Menu
             nav.classList.toggle('nav-active');
-            
+
             // Animate Burger (Turn into X)
             burger.classList.toggle('toggle');
         });
     }
+</script>
+
+<script>
+// =========================
+// MULTILINGUAL TRANSLATIONS
+// =========================
+
+const translations = {
+    en: {
+        nav: {
+            about: "About",
+            legacy: "Legacy",
+            when: "When",
+            technology: "Technology",
+            invest: "Invest",
+            contact: "Contact"
+        },
+        hero: {
+            title: "The Next Frontier is Grey.",
+            subtitle: "Sustainable resource extraction for the cis-lunar economy.",
+            cta: "View Prospectus"
+        },
+        about: {
+            title: "The Mission",
+            tagline: "We are looking up.",
+            p1: "Earth is finite. The Moon is the gateway to the solar system. Regolith Mining Corp is dedicated to the exploration, categorization, and eventual extraction of Helium-3 and rare earth metals from the lunar surface.",
+            p2: "We believe that heavy industry belongs in orbit, preserving Earth as a garden while we harvest the dead rocks of the moon to power our future."
+        },
+        carousel: {
+            title: "LUNAR LEGACY",
+            subtitle: "The path was paved 50 years ago.",
+            img1: "Aldrin Salutes the Flag",
+            img2: "Earthrise",
+            img3: "Lunar Roving Vehicle",
+            img4: "One Small Step",
+            img5: "The Last Walk"
+        },
+        legacy: {
+            title: "Standing on Giants",
+            p1: "In 1969, humanity took a small step. Today, we are preparing for the giant leap of industrialization. We honor the Apollo program not just as history, but as the initial survey mission for our operations.",
+            p2: "The footprint remains untouched. We intend to build the road that leads back to it."
+        },
+        timeline: {
+            title: "Operational Timeline",
+            phase1: {
+                title: "Phase 1: Survey",
+                desc: "Remote spectral analysis of the South Pole-Aitken basin."
+            },
+            phase2: {
+                title: "Phase 2: Robotics",
+                desc: "Deployment of autonomous rovers for regolith sifting samples."
+            },
+            phase3: {
+                title: "Phase 3: Extraction",
+                desc: "In-situ resource utilization (ISRU) tests and oxygen generation."
+            }
+        },
+        tech: {
+            title: "Technology",
+            card1: {
+                title: "Automated Sifting",
+                desc: "Low-gravity conveyor systems designed to process regolith dust without atmosphere."
+            },
+            card2: {
+                title: "Thermal Wadis",
+                desc: "Utilizing eternal light peaks for solar power generation."
+            },
+            card3: {
+                title: "Launch Loops",
+                desc: "Electromagnetic acceleration for non-rocket payload delivery to orbit."
+            }
+        },
+        invest: {
+            title: "Capital for the Cosmos",
+            desc: "Space mining is a capital-intensive, century-long play. We are accepting inquiries from accredited institutional partners.",
+            cta: "Request Deck"
+        },
+        footer: {
+            title: "Contact Operations",
+            location: "Oslo, Norway | Lunar Orbit",
+            version: "System Version",
+            deployed: "Last Deployed",
+            operator: "Operator"
+        }
+    },
+    no: {
+        nav: {
+            about: "Om Oss",
+            legacy: "Arv",
+            when: "Når",
+            technology: "Teknologi",
+            invest: "Invester",
+            contact: "Kontakt"
+        },
+        hero: {
+            title: "Den Neste Grensen er Grå.",
+            subtitle: "Bærekraftig ressursutvinning for cis-lunar økonomien.",
+            cta: "Se Prospekt"
+        },
+        about: {
+            title: "Oppdraget",
+            tagline: "Vi ser oppover.",
+            p1: "Jorden er begrenset. Månen er porten til solsystemet. Regolith Mining Corp er dedikert til utforskning, kategorisering og eventuell utvinning av Helium-3 og sjeldne jordmetaller fra måneoverflaten.",
+            p2: "Vi tror at tungindustri hører hjemme i bane, og bevarer Jorden som en hage mens vi høster de døde steinene på månen for å drive vår fremtid."
+        },
+        carousel: {
+            title: "MÅNENS ARV",
+            subtitle: "Stien ble banet for 50 år siden.",
+            img1: "Aldrin Hilser Flagget",
+            img2: "Jordoppgang",
+            img3: "Månekjøretøy",
+            img4: "Ett Lite Skritt",
+            img5: "Den Siste Turen"
+        },
+        legacy: {
+            title: "Stående på Kjempers Skuldre",
+            p1: "I 1969 tok menneskeheten et lite skritt. I dag forbereder vi oss på det gigantiske spranget mot industrialisering. Vi hedrer Apollo-programmet ikke bare som historie, men som det første kartleggingsoppdraget for våre operasjoner.",
+            p2: "Fotavtrykket forblir urørt. Vi har til hensikt å bygge veien som fører tilbake til det."
+        },
+        timeline: {
+            title: "Operativ Tidslinje",
+            phase1: {
+                title: "Fase 1: Kartlegging",
+                desc: "Fjernspektralanalyse av Sørpol-Aitken-bassenget."
+            },
+            phase2: {
+                title: "Fase 2: Robotikk",
+                desc: "Utplassering av autonome rovere for regolitt-siktingsprøver."
+            },
+            phase3: {
+                title: "Fase 3: Utvinning",
+                desc: "In-situ ressursutnyttelse (ISRU) tester og oksygengenerering."
+            }
+        },
+        tech: {
+            title: "Teknologi",
+            card1: {
+                title: "Automatisert Sikting",
+                desc: "Lav-gravitasjonsbånd designet for å prosessere regolittstøv uten atmosfære."
+            },
+            card2: {
+                title: "Termiske Wadier",
+                desc: "Utnyttelse av evige lystopper for solkraftproduksjon."
+            },
+            card3: {
+                title: "Oppskytningsløkker",
+                desc: "Elektromagnetisk akselerasjon for ikke-rakett nyttelastlevering til bane."
+            }
+        },
+        invest: {
+            title: "Kapital for Kosmos",
+            desc: "Romgruvedrift er et kapitalintensivt, århundrelangt spill. Vi aksepterer henvendelser fra akkrediterte institusjonelle partnere.",
+            cta: "Be om Presentasjon"
+        },
+        footer: {
+            title: "Kontakt Operasjoner",
+            location: "Oslo, Norge | Månebane",
+            version: "Systemversjon",
+            deployed: "Sist Distribuert",
+            operator: "Operatør"
+        }
+    },
+    de: {
+        nav: {
+            about: "Über Uns",
+            legacy: "Vermächtnis",
+            when: "Wann",
+            technology: "Technologie",
+            invest: "Investieren",
+            contact: "Kontakt"
+        },
+        hero: {
+            title: "Die Nächste Grenze ist Grau.",
+            subtitle: "Nachhaltige Ressourcengewinnung für die cis-lunare Wirtschaft.",
+            cta: "Prospekt Ansehen"
+        },
+        about: {
+            title: "Die Mission",
+            tagline: "Wir schauen nach oben.",
+            p1: "Die Erde ist endlich. Der Mond ist das Tor zum Sonnensystem. Regolith Mining Corp widmet sich der Erkundung, Kategorisierung und eventuellen Gewinnung von Helium-3 und Seltenen Erden von der Mondoberfläche.",
+            p2: "Wir glauben, dass die Schwerindustrie in den Orbit gehört und die Erde als Garten bewahrt wird, während wir die toten Gesteine des Mondes ernten, um unsere Zukunft anzutreiben."
+        },
+        carousel: {
+            title: "MOND-VERMÄCHTNIS",
+            subtitle: "Der Weg wurde vor 50 Jahren geebnet.",
+            img1: "Aldrin Grüßt die Flagge",
+            img2: "Erdaufgang",
+            img3: "Mondfahrzeug",
+            img4: "Ein Kleiner Schritt",
+            img5: "Der Letzte Gang"
+        },
+        legacy: {
+            title: "Auf den Schultern von Riesen",
+            p1: "1969 machte die Menschheit einen kleinen Schritt. Heute bereiten wir uns auf den großen Sprung der Industrialisierung vor. Wir ehren das Apollo-Programm nicht nur als Geschichte, sondern als erste Vermessungsmission für unsere Operationen.",
+            p2: "Der Fußabdruck bleibt unberührt. Wir beabsichtigen, die Straße zu bauen, die dorthin zurückführt."
+        },
+        timeline: {
+            title: "Operativer Zeitplan",
+            phase1: {
+                title: "Phase 1: Vermessung",
+                desc: "Fernspektralanalyse des Südpol-Aitken-Beckens."
+            },
+            phase2: {
+                title: "Phase 2: Robotik",
+                desc: "Einsatz autonomer Rover für Regolith-Siebproben."
+            },
+            phase3: {
+                title: "Phase 3: Gewinnung",
+                desc: "In-situ-Ressourcennutzung (ISRU) Tests und Sauerstofferzeugung."
+            }
+        },
+        tech: {
+            title: "Technologie",
+            card1: {
+                title: "Automatisiertes Sieben",
+                desc: "Niedriggravitations-Fördersysteme für die Verarbeitung von Regolithstaub ohne Atmosphäre."
+            },
+            card2: {
+                title: "Thermale Wadis",
+                desc: "Nutzung ewiger Lichtgipfel zur Solarstromerzeugung."
+            },
+            card3: {
+                title: "Startschleifen",
+                desc: "Elektromagnetische Beschleunigung für nicht-raketenbetriebene Nutzlastlieferung in den Orbit."
+            }
+        },
+        invest: {
+            title: "Kapital für den Kosmos",
+            desc: "Weltraumbergbau ist ein kapitalintensives, jahrhundertelanges Unterfangen. Wir nehmen Anfragen von akkreditierten institutionellen Partnern entgegen.",
+            cta: "Präsentation Anfordern"
+        },
+        footer: {
+            title: "Kontakt Operations",
+            location: "Oslo, Norwegen | Mondumlaufbahn",
+            version: "Systemversion",
+            deployed: "Zuletzt Bereitgestellt",
+            operator: "Betreiber"
+        }
+    },
+    sv: {
+        nav: {
+            about: "Om Oss",
+            legacy: "Arv",
+            when: "När",
+            technology: "Teknologi",
+            invest: "Investera",
+            contact: "Kontakt"
+        },
+        hero: {
+            title: "Nästa Gräns är Grå.",
+            subtitle: "Hållbar resursutvinning för den cis-lunära ekonomin.",
+            cta: "Visa Prospekt"
+        },
+        about: {
+            title: "Uppdraget",
+            tagline: "Vi tittar uppåt.",
+            p1: "Jorden är ändlig. Månen är porten till solsystemet. Regolith Mining Corp ägnar sig åt utforskning, kategorisering och eventuell utvinning av Helium-3 och sällsynta jordartsmetaller från månens yta.",
+            p2: "Vi tror att tung industri hör hemma i omloppsbana, vilket bevarar jorden som en trädgård medan vi skördar månens döda stenar för att driva vår framtid."
+        },
+        carousel: {
+            title: "MÅNENS ARV",
+            subtitle: "Vägen banade för 50 år sedan.",
+            img1: "Aldrin Hälsar Flaggan",
+            img2: "Jorduppgång",
+            img3: "Månfordon",
+            img4: "Ett Litet Steg",
+            img5: "Den Sista Promenaden"
+        },
+        legacy: {
+            title: "Stående på Jättars Axlar",
+            p1: "1969 tog mänskligheten ett litet steg. Idag förbereder vi oss för det gigantiska språnget mot industrialisering. Vi hedrar Apollo-programmet inte bara som historia, utan som den första kartläggningsmissionen för våra operationer.",
+            p2: "Fotavtrycket förblir orört. Vi avser att bygga vägen som leder tillbaka till den."
+        },
+        timeline: {
+            title: "Operativ Tidslinje",
+            phase1: {
+                title: "Fas 1: Kartläggning",
+                desc: "Fjärrspektralanalys av Sydpolen-Aitken-bassängen."
+            },
+            phase2: {
+                title: "Fas 2: Robotik",
+                desc: "Utplacering av autonoma rovers för regolitsiktningsprover."
+            },
+            phase3: {
+                title: "Fas 3: Utvinning",
+                desc: "In-situ resursutnyttjande (ISRU) tester och syrgasframställning."
+            }
+        },
+        tech: {
+            title: "Teknologi",
+            card1: {
+                title: "Automatiserad Siktning",
+                desc: "Låggravitationstransportband designade för att bearbeta regolitdamm utan atmosfär."
+            },
+            card2: {
+                title: "Termiska Wadis",
+                desc: "Utnyttjande av eviga ljustoppar för solkraftsproduktion."
+            },
+            card3: {
+                title: "Uppskjutningsloopar",
+                desc: "Elektromagnetisk acceleration för icke-raket nyttolastleverans till omloppsbana."
+            }
+        },
+        invest: {
+            title: "Kapital för Kosmos",
+            desc: "Rymdgruvdrift är en kapitalintensiv, sekel-lång satsning. Vi tar emot förfrågningar från ackrediterade institutionella partners.",
+            cta: "Begär Presentation"
+        },
+        footer: {
+            title: "Kontakta Operationer",
+            location: "Oslo, Norge | Månbana",
+            version: "Systemversion",
+            deployed: "Senast Distribuerad",
+            operator: "Operatör"
+        }
+    },
+    nl: {
+        nav: {
+            about: "Over Ons",
+            legacy: "Erfgoed",
+            when: "Wanneer",
+            technology: "Technologie",
+            invest: "Investeren",
+            contact: "Contact"
+        },
+        hero: {
+            title: "De Volgende Grens is Grijs.",
+            subtitle: "Duurzame grondstoffenwinning voor de cis-lunaire economie.",
+            cta: "Bekijk Prospectus"
+        },
+        about: {
+            title: "De Missie",
+            tagline: "Wij kijken omhoog.",
+            p1: "De aarde is eindig. De maan is de poort naar het zonnestelsel. Regolith Mining Corp wijdt zich aan de verkenning, categorisering en uiteindelijke winning van Helium-3 en zeldzame aardmetalen van het maanoppervlak.",
+            p2: "Wij geloven dat zware industrie in een baan om de aarde thuishoort, waardoor de aarde als een tuin behouden blijft terwijl we de dode rotsen van de maan oogsten om onze toekomst aan te drijven."
+        },
+        carousel: {
+            title: "MAANERFGOED",
+            subtitle: "Het pad werd 50 jaar geleden geëffend.",
+            img1: "Aldrin Groet de Vlag",
+            img2: "Aardeopkomst",
+            img3: "Maanvoertuig",
+            img4: "Eén Kleine Stap",
+            img5: "De Laatste Wandeling"
+        },
+        legacy: {
+            title: "Staand op de Schouders van Reuzen",
+            p1: "In 1969 zette de mensheid een kleine stap. Vandaag bereiden we ons voor op de reuzenstap van industrialisatie. We eren het Apollo-programma niet alleen als geschiedenis, maar als de eerste verkennings­missie voor onze operaties.",
+            p2: "De voetafdruk blijft onaangetast. Wij zijn van plan de weg te bouwen die ernaar terug leidt."
+        },
+        timeline: {
+            title: "Operationele Tijdlijn",
+            phase1: {
+                title: "Fase 1: Onderzoek",
+                desc: "Externe spectrale analyse van het Zuidpool-Aitken-bekken."
+            },
+            phase2: {
+                title: "Fase 2: Robotica",
+                desc: "Inzet van autonome rovers voor regoliet zeef­monsters."
+            },
+            phase3: {
+                title: "Fase 3: Winning",
+                desc: "In-situ hulpbronnenbenutting (ISRU) tests en zuurstof­productie."
+            }
+        },
+        tech: {
+            title: "Technologie",
+            card1: {
+                title: "Geautomatiseerd Zeven",
+                desc: "Lage-zwaartekracht transportsystemen ontworpen voor het verwerken van regoliet­stof zonder atmosfeer."
+            },
+            card2: {
+                title: "Thermische Wadis",
+                desc: "Benutten van eeuwig licht pieken voor zonne-energie­productie."
+            },
+            card3: {
+                title: "Lanceerlussen",
+                desc: "Elektromagnetische versnelling voor niet-raket nuttige­lastlevering naar een baan."
+            }
+        },
+        invest: {
+            title: "Kapitaal voor de Kosmos",
+            desc: "Ruimtemijnbouw is een kapitaalintensief, eeuwenlang spel. Wij accepteren aanvragen van geaccrediteerde institutionele partners.",
+            cta: "Presentatie Aanvragen"
+        },
+        footer: {
+            title: "Contact Operaties",
+            location: "Oslo, Noorwegen | Maanbaan",
+            version: "Systeemversie",
+            deployed: "Laatst Geïmplementeerd",
+            operator: "Operator"
+        }
+    }
+};
+
+// =========================
+// LANGUAGE SWITCHING LOGIC
+// =========================
+
+// Get saved language or default to English
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+// Language data with flags
+const languageData = {
+    en: { flag: '🇬🇧', code: 'EN', name: 'English' },
+    no: { flag: '🇳🇴', code: 'NO', name: 'Norsk' },
+    de: { flag: '🇩🇪', code: 'DE', name: 'Deutsch' },
+    sv: { flag: '🇸🇪', code: 'SV', name: 'Svenska' },
+    nl: { flag: '🇳🇱', code: 'NL', name: 'Nederlands' }
+};
+
+// Dropdown elements
+const dropdownBtn = document.getElementById('langDropdownBtn');
+const dropdownMenu = document.getElementById('langDropdownMenu');
+const langOptions = document.querySelectorAll('.lang-option');
+
+// Toggle dropdown
+dropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdownBtn.classList.toggle('active');
+    dropdownMenu.classList.toggle('active');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', () => {
+    dropdownBtn.classList.remove('active');
+    dropdownMenu.classList.remove('active');
+});
+
+// Prevent dropdown from closing when clicking inside menu
+dropdownMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Function to update all text on the page
+function updateLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('preferredLanguage', lang);
+
+    // Update all elements with data-translate attribute
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const keys = element.getAttribute('data-translate').split('.');
+        let translation = translations[lang];
+
+        // Navigate through nested object
+        for (const key of keys) {
+            translation = translation[key];
+        }
+
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+
+    // Update dropdown button display
+    const langInfo = languageData[lang];
+    dropdownBtn.querySelector('.flag').textContent = langInfo.flag;
+    dropdownBtn.querySelector('.lang-code').textContent = langInfo.code;
+
+    // Update selected state in dropdown
+    langOptions.forEach(option => {
+        option.classList.remove('selected');
+        if (option.getAttribute('data-lang') === lang) {
+            option.classList.add('selected');
+        }
+    });
+
+    // Close dropdown after selection
+    dropdownBtn.classList.remove('active');
+    dropdownMenu.classList.remove('active');
+}
+
+// Add click event listeners to language options
+langOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        const lang = option.getAttribute('data-lang');
+        updateLanguage(lang);
+    });
+});
+
+// Initialize with saved or default language
+updateLanguage(currentLang);
 </script>
 </body>
 </html>
