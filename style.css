@@ -845,6 +845,83 @@ nav {
     color: #777;
 }
 
+/* =========================
+   10. VALUATION SECTION
+   ========================= */
+.valuation-table-wrapper {
+    overflow-x: auto;
+    margin: 40px 0;
+    border: 1px solid #1a1a1a;
+    background: #050505;
+}
+
+.valuation-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.valuation-table thead {
+    background: #0a0a0a;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.valuation-table th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.valuation-table tbody tr {
+    border-bottom: 1px solid #111;
+    transition: background 0.2s ease;
+}
+
+.valuation-table tbody tr:hover {
+    background: #0a0a0a;
+}
+
+.valuation-table td {
+    padding: 20px 15px;
+    color: #ccc;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.valuation-table td:first-child {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+.valuation-table .total-row {
+    background: #0a0a0a;
+    border-top: 2px solid #1a1a1a;
+    font-weight: 600;
+}
+
+.valuation-table .total-row td {
+    color: #fff;
+    font-size: 1rem;
+    padding: 22px 15px;
+}
+
+.valuation-note {
+    margin-top: 30px;
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
     .blog-grid {
@@ -853,5 +930,27 @@ nav {
 
     .partners-grid {
         grid-template-columns: 1fr;
+    }
+
+    .valuation-table {
+        font-size: 0.75rem;
+    }
+
+    .valuation-table th,
+    .valuation-table td {
+        padding: 12px 8px;
+    }
+
+    .valuation-table th {
+        font-size: 0.6rem;
+    }
+
+    .valuation-table td {
+        font-size: 0.8rem;
+    }
+
+    .valuation-note {
+        font-size: 0.7rem;
+        padding: 0 10px;
     }
 }

@@ -15,6 +15,134 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://regolithmining.com/#organization",
+                "name": "Regolith Mining Corp",
+                "alternateName": "Regolith Mining",
+                "url": "https://regolithmining.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://regolithmining.com/logo.png",
+                    "width": 600,
+                    "height": 60
+                },
+                "description": "Sustainable resource extraction for the cis-lunar economy. Dedicated to the exploration, categorization, and eventual extraction of Helium-3 and rare earth metals from the lunar surface.",
+                "foundingDate": "2025",
+                "foundingLocation": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Oslo",
+                        "addressCountry": "NO"
+                    }
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "andreas.bjornsund@gmail.com",
+                    "contactType": "Investor Relations",
+                    "areaServed": "Worldwide"
+                },
+                "sameAs": [],
+                "knowsAbout": [
+                    "Space Mining",
+                    "Lunar Mining",
+                    "Helium-3 Extraction",
+                    "Rare Earth Elements",
+                    "Space Industrialization",
+                    "ISRU Technology",
+                    "Lunar Resource Utilization"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://regolithmining.com/#website",
+                "url": "https://regolithmining.com",
+                "name": "Regolith Mining | Lunar Extraction Operations",
+                "description": "The next frontier is grey. Sustainable resource extraction for the cis-lunar economy.",
+                "publisher": {
+                    "@id": "https://regolithmining.com/#organization"
+                },
+                "inLanguage": ["en", "no", "de", "sv", "nl"]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://regolithmining.com/#webpage",
+                "url": "https://regolithmining.com",
+                "name": "Regolith Mining | Lunar Extraction Operations",
+                "isPartOf": {
+                    "@id": "https://regolithmining.com/#website"
+                },
+                "about": {
+                    "@id": "https://regolithmining.com/#organization"
+                },
+                "description": "Earth is finite. The Moon is the gateway to the solar system. Regolith Mining Corp is dedicated to lunar resource extraction and space industrialization.",
+                "inLanguage": "en"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://regolithmining.com/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://regolithmining.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "About",
+                        "item": "https://regolithmining.com#about"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Technology",
+                        "item": "https://regolithmining.com#technology"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Valuation",
+                        "item": "https://regolithmining.com#valuation"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Invest",
+                        "item": "https://regolithmining.com#invest"
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "@id": "https://regolithmining.com/#service",
+                "serviceType": "Lunar Resource Extraction",
+                "provider": {
+                    "@id": "https://regolithmining.com/#organization"
+                },
+                "areaServed": {
+                    "@type": "Place",
+                    "name": "Moon"
+                },
+                "description": "Exploration, categorization, and extraction of Helium-3, rare earth elements, titanium, and water ice from the lunar surface.",
+                "offers": {
+                    "@type": "Offer",
+                    "availability": "https://schema.org/PreOrder",
+                    "description": "Investment opportunities in lunar mining operations"
+                }
+            }
+        ]
+    }
+    </script>
+
 <style>
     /* === MOBILE MENU FIX === */
     /* 1. Hide the hamburger on desktop */
@@ -113,6 +241,7 @@
             <li><a href="#history-gallery" data-translate="nav.legacy">Legacy</a></li>
             <li><a href="#when" data-translate="nav.when">When</a></li>
             <li><a href="#technology" data-translate="nav.technology">Technology</a></li>
+            <li><a href="#valuation" data-translate="nav.valuation">Valuation</a></li>
             <li><a href="#blog" data-translate="nav.blog">Blog</a></li>
             <li><a href="#invest" data-translate="nav.invest">Invest</a></li>
             <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
@@ -277,6 +406,78 @@
                 <p data-translate="tech.card3.desc">Electromagnetic acceleration for non-rocket payload delivery to orbit.</p>
             </div>
         </div>
+    </section>
+
+    <section id="valuation" class="container">
+        <h2 data-translate="valuation.title">Lunar Resource Valuation</h2>
+        <p class="lead" data-translate="valuation.subtitle">Estimated total market value of extractable lunar minerals and elements.</p>
+
+        <div class="valuation-table-wrapper">
+            <table class="valuation-table">
+                <thead>
+                    <tr>
+                        <th data-translate="valuation.table.resource">Resource</th>
+                        <th data-translate="valuation.table.2025">2025</th>
+                        <th data-translate="valuation.table.2035">2035</th>
+                        <th data-translate="valuation.table.2045">2045</th>
+                        <th data-translate="valuation.table.2055">2055</th>
+                        <th data-translate="valuation.table.2065">2065</th>
+                        <th data-translate="valuation.table.2075">2075</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-translate="valuation.table.helium3">Helium-3</td>
+                        <td>$2.2T</td>
+                        <td>$4.8T</td>
+                        <td>$10.5T</td>
+                        <td>$22.9T</td>
+                        <td>$50.1T</td>
+                        <td>$109.5T</td>
+                    </tr>
+                    <tr>
+                        <td data-translate="valuation.table.ree">Rare Earth Elements</td>
+                        <td>$840B</td>
+                        <td>$1.9T</td>
+                        <td>$4.2T</td>
+                        <td>$9.5T</td>
+                        <td>$21.3T</td>
+                        <td>$47.9T</td>
+                    </tr>
+                    <tr>
+                        <td data-translate="valuation.table.titanium">Titanium</td>
+                        <td>$620B</td>
+                        <td>$1.2T</td>
+                        <td>$2.4T</td>
+                        <td>$4.7T</td>
+                        <td>$9.2T</td>
+                        <td>$18.0T</td>
+                    </tr>
+                    <tr>
+                        <td data-translate="valuation.table.water">Water Ice</td>
+                        <td>$450B</td>
+                        <td>$890B</td>
+                        <td>$1.8T</td>
+                        <td>$3.5T</td>
+                        <td>$6.9T</td>
+                        <td>$13.6T</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td data-translate="valuation.table.total">Total Estimated Value</td>
+                        <td>$4.1T</td>
+                        <td>$8.8T</td>
+                        <td>$18.9T</td>
+                        <td>$40.6T</td>
+                        <td>$87.5T</td>
+                        <td>$189.0T</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="valuation-note" data-translate="valuation.note">
+            Projections based on terrestrial scarcity trends, increased industrial demand, and development of fusion energy technologies. Values represent total extractable reserves, not annual production.
+        </p>
     </section>
 
     <section id="invest" class="hero-small">
@@ -501,6 +702,7 @@ const translations = {
             legacy: "Legacy",
             when: "When",
             technology: "Technology",
+            valuation: "Valuation",
             blog: "Blog",
             invest: "Invest",
             contact: "Contact"
@@ -560,6 +762,25 @@ const translations = {
                 desc: "Electromagnetic acceleration for non-rocket payload delivery to orbit."
             }
         },
+        valuation: {
+            title: "Lunar Resource Valuation",
+            subtitle: "Estimated total market value of extractable lunar minerals and elements.",
+            table: {
+                resource: "Resource",
+                "2025": "2025",
+                "2035": "2035",
+                "2045": "2045",
+                "2055": "2055",
+                "2065": "2065",
+                "2075": "2075",
+                helium3: "Helium-3",
+                ree: "Rare Earth Elements",
+                titanium: "Titanium",
+                water: "Water Ice",
+                total: "Total Estimated Value"
+            },
+            note: "Projections based on terrestrial scarcity trends, increased industrial demand, and development of fusion energy technologies. Values represent total extractable reserves, not annual production."
+        },
         invest: {
             title: "Capital for the Cosmos",
             desc: "Space mining is a capital-intensive, century-long play. We are accepting inquiries from accredited institutional partners.",
@@ -613,6 +834,7 @@ const translations = {
             legacy: "Arv",
             when: "Når",
             technology: "Teknologi",
+            valuation: "Verdivurdering",
             blog: "Blogg",
             invest: "Invester",
             contact: "Kontakt"
@@ -672,6 +894,25 @@ const translations = {
                 desc: "Elektromagnetisk akselerasjon for ikke-rakett nyttelastlevering til bane."
             }
         },
+        valuation: {
+            title: "Verdivurdering av Måneressurser",
+            subtitle: "Estimert total markedsverdi av utvinnbare månemineraler og elementer.",
+            table: {
+                resource: "Ressurs",
+                "2025": "2025",
+                "2035": "2035",
+                "2045": "2045",
+                "2055": "2055",
+                "2065": "2065",
+                "2075": "2075",
+                helium3: "Helium-3",
+                ree: "Sjeldne Jordmetaller",
+                titanium: "Titan",
+                water: "Vannis",
+                total: "Total Estimert Verdi"
+            },
+            note: "Anslag basert på terrestrisk knapphets­trender, økt industriell etterspørsel og utvikling av fusjons­energi­teknologier. Verdiene representerer totale utvinnbare reserver, ikke årlig produksjon."
+        },
         invest: {
             title: "Kapital for Kosmos",
             desc: "Romgruvedrift er et kapitalintensivt, århundrelangt spill. Vi aksepterer henvendelser fra akkrediterte institusjonelle partnere.",
@@ -725,6 +966,7 @@ const translations = {
             legacy: "Vermächtnis",
             when: "Wann",
             technology: "Technologie",
+            valuation: "Bewertung",
             blog: "Blog",
             invest: "Investieren",
             contact: "Kontakt"
@@ -784,6 +1026,25 @@ const translations = {
                 desc: "Elektromagnetische Beschleunigung für nicht-raketenbetriebene Nutzlastlieferung in den Orbit."
             }
         },
+        valuation: {
+            title: "Bewertung der Mondressourcen",
+            subtitle: "Geschätzter Gesamtmarktwert abbaubarer lunarer Mineralien und Elemente.",
+            table: {
+                resource: "Ressource",
+                "2025": "2025",
+                "2035": "2035",
+                "2045": "2045",
+                "2055": "2055",
+                "2065": "2065",
+                "2075": "2075",
+                helium3: "Helium-3",
+                ree: "Seltene Erden",
+                titanium: "Titan",
+                water: "Wassereis",
+                total: "Geschätzter Gesamtwert"
+            },
+            note: "Prognosen basieren auf terrestrischen Knappheitstrends, gesteigerter industrieller Nachfrage und der Entwicklung von Fusionsenergie­technologien. Werte repräsentieren abbaubare Gesamtreserven, nicht die jährliche Produktion."
+        },
         invest: {
             title: "Kapital für den Kosmos",
             desc: "Weltraumbergbau ist ein kapitalintensives, jahrhundertelanges Unterfangen. Wir nehmen Anfragen von akkreditierten institutionellen Partnern entgegen.",
@@ -837,6 +1098,7 @@ const translations = {
             legacy: "Arv",
             when: "När",
             technology: "Teknologi",
+            valuation: "Värdering",
             blog: "Blogg",
             invest: "Investera",
             contact: "Kontakt"
@@ -896,6 +1158,25 @@ const translations = {
                 desc: "Elektromagnetisk acceleration för icke-raket nyttolastleverans till omloppsbana."
             }
         },
+        valuation: {
+            title: "Värdering av Månresurser",
+            subtitle: "Uppskattat totalt marknadsvärde för utvinningsbara månmineraler och element.",
+            table: {
+                resource: "Resurs",
+                "2025": "2025",
+                "2035": "2035",
+                "2045": "2045",
+                "2055": "2055",
+                "2065": "2065",
+                "2075": "2075",
+                helium3: "Helium-3",
+                ree: "Sällsynta Jordartsmetaller",
+                titanium: "Titan",
+                water: "Vattenis",
+                total: "Totalt Uppskattat Värde"
+            },
+            note: "Prognoser baserade på terrestrisk briststrender, ökad industriell efterfrågan och utveckling av fusionsenergi­teknologier. Värdena representerar totala utvinningsbara reserver, inte årlig produktion."
+        },
         invest: {
             title: "Kapital för Kosmos",
             desc: "Rymdgruvdrift är en kapitalintensiv, sekel-lång satsning. Vi tar emot förfrågningar från ackrediterade institutionella partners.",
@@ -949,6 +1230,7 @@ const translations = {
             legacy: "Erfgoed",
             when: "Wanneer",
             technology: "Technologie",
+            valuation: "Waardering",
             blog: "Blog",
             invest: "Investeren",
             contact: "Contact"
@@ -1007,6 +1289,25 @@ const translations = {
                 title: "Lanceerlussen",
                 desc: "Elektromagnetische versnelling voor niet-raket nuttige­lastlevering naar een baan."
             }
+        },
+        valuation: {
+            title: "Waardering van Maanbronnen",
+            subtitle: "Geschatte totale marktwaarde van winbare maanmineralen en elementen.",
+            table: {
+                resource: "Hulpbron",
+                "2025": "2025",
+                "2035": "2035",
+                "2045": "2045",
+                "2055": "2055",
+                "2065": "2065",
+                "2075": "2075",
+                helium3: "Helium-3",
+                ree: "Zeldzame Aardmetalen",
+                titanium: "Titanium",
+                water: "Waterijs",
+                total: "Totale Geschatte Waarde"
+            },
+            note: "Prognoses gebaseerd op terrestrische schaarstettrends, toegenomen industriële vraag en ontwikkeling van fusie-energie­technologieën. Waarden vertegenwoordigen totale winbare reserves, niet jaarlijkse productie."
         },
         invest: {
             title: "Kapitaal voor de Kosmos",
