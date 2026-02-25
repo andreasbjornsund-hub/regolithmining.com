@@ -414,74 +414,77 @@
 
     <section id="valuation" class="container">
         <h2 data-translate="valuation.title">Lunar Resource Valuation</h2>
-        <p class="lead" data-translate="valuation.subtitle">Estimated total market value of extractable lunar minerals and elements.</p>
+        <p class="lead" data-translate="valuation.subtitle">Estimated total reserve values based on published research and market data.</p>
 
         <div class="valuation-table-wrapper">
             <table class="valuation-table">
                 <thead>
                     <tr>
                         <th data-translate="valuation.table.resource">Resource</th>
-                        <th data-translate="valuation.table.2025">2025</th>
-                        <th data-translate="valuation.table.2035">2035</th>
-                        <th data-translate="valuation.table.2045">2045</th>
-                        <th data-translate="valuation.table.2055">2055</th>
-                        <th data-translate="valuation.table.2065">2065</th>
-                        <th data-translate="valuation.table.2075">2075</th>
+                        <th data-translate="valuation.table.low">Low Est.</th>
+                        <th data-translate="valuation.table.mid">Mid Est.</th>
+                        <th data-translate="valuation.table.high">High Est.</th>
+                        <th data-translate="valuation.table.source">Key Source</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td data-translate="valuation.table.helium3">Helium-3</td>
-                        <td>$2.2T</td>
-                        <td>$4.8T</td>
-                        <td>$10.5T</td>
-                        <td>$22.9T</td>
-                        <td>$50.1T</td>
-                        <td>$109.5T</td>
+                        <td>$1.3T</td>
+                        <td>$3.5T</td>
+                        <td>$20T</td>
+                        <td style="font-size:0.7rem" data-translate="valuation.table.he3source">Schmitt & Kulcinski; Interlune</td>
                     </tr>
                     <tr>
                         <td data-translate="valuation.table.ree">Rare Earth Elements</td>
-                        <td>$840B</td>
-                        <td>$1.9T</td>
-                        <td>$4.2T</td>
-                        <td>$9.5T</td>
-                        <td>$21.3T</td>
-                        <td>$47.9T</td>
+                        <td>$100B</td>
+                        <td>$300B</td>
+                        <td>$500B</td>
+                        <td style="font-size:0.7rem" data-translate="valuation.table.reesource">USGS (2025); Metzger (2017)</td>
                     </tr>
                     <tr>
-                        <td data-translate="valuation.table.titanium">Titanium</td>
-                        <td>$620B</td>
-                        <td>$1.2T</td>
-                        <td>$2.4T</td>
-                        <td>$4.7T</td>
-                        <td>$9.2T</td>
-                        <td>$18.0T</td>
+                        <td data-translate="valuation.table.titanium">Titanium (Ilmenite)</td>
+                        <td>$50B</td>
+                        <td>$150B</td>
+                        <td>$300B</td>
+                        <td style="font-size:0.7rem" data-translate="valuation.table.tisource">Apollo sample analysis; USGS</td>
                     </tr>
                     <tr>
                         <td data-translate="valuation.table.water">Water Ice</td>
-                        <td>$450B</td>
-                        <td>$890B</td>
-                        <td>$1.8T</td>
-                        <td>$3.5T</td>
-                        <td>$6.9T</td>
-                        <td>$13.6T</td>
+                        <td>$50B</td>
+                        <td>$200B</td>
+                        <td>$500B</td>
+                        <td style="font-size:0.7rem" data-translate="valuation.table.watersource">Sowers et al. (2019); NASA JPL</td>
                     </tr>
                     <tr class="total-row">
-                        <td data-translate="valuation.table.total">Total Estimated Value</td>
-                        <td>$4.1T</td>
-                        <td>$8.8T</td>
-                        <td>$18.9T</td>
-                        <td>$40.6T</td>
-                        <td>$87.5T</td>
-                        <td>$189.0T</td>
+                        <td data-translate="valuation.table.total">Total Estimated Reserves</td>
+                        <td>$1.5T</td>
+                        <td>$4.2T</td>
+                        <td>$21.3T</td>
+                        <td style="font-size:0.7rem" data-translate="valuation.table.totalsource">Average of estimates</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <p class="valuation-note" data-translate="valuation.note">
-            Projections based on terrestrial scarcity trends, increased industrial demand, and development of fusion energy technologies. Values represent total extractable reserves, not annual production.
+            Values represent estimated total extractable reserves based on published research, not annual production. Helium-3 valuations assume viable D-³He fusion technology. Range reflects uncertainty in extraction costs and market development. See references below.
         </p>
+
+        <div class="references" style="margin-top: 20px; padding: 15px; background: #0a0a12; border-radius: 8px; border: 1px solid #1a1a2a;">
+            <h3 style="font-size: 0.85rem; color: #8888aa; margin-bottom: 10px;" data-translate="valuation.refs.title">References</h3>
+            <ol style="font-size: 0.7rem; color: #666; line-height: 1.8; padding-left: 20px;">
+                <li>Wittenberg, L.J., Santarius, J.F. & Kulcinski, G.L. (1986). "Lunar Source of ³He for Commercial Fusion Power." <em>Fusion Technology</em>, 10, 167-178.</li>
+                <li>Schmitt, H.H. & Kulcinski, G.L. (1992). "Helium-3 Fusion Economics." <em>Journal of the British Interplanetary Society</em>, 45(2).</li>
+                <li>Schmitt, H.H. (2006). <em>Return to the Moon: Exploration, Enterprise, and Energy in the Human Settlement of Space</em>. Springer.</li>
+                <li>Metzger, P.T. (2017). "Sources of Extraterrestrial Rare Earth Elements: To the Moon and Beyond." <em>Resources</em>, 6(3), 40.</li>
+                <li>Sowers, G.F. et al. (2019). "Commercial Lunar Propellant Architecture." <em>REACH - Reviews in Human Space Exploration</em>, 13.</li>
+                <li>USGS (2025). "Rare Earth Elements on the Moon." <em>Fact Sheet 2025-3049</em>.</li>
+                <li>NASA (2021). Olson, A.D. "Lunar Helium-3: Mining Concepts, Extraction Research, and Potential ISRU." <em>AIAA ASCEND</em>.</li>
+                <li>Interlune / Edelgas Group (2025). Helium-3 market pricing: ~$2,500/liter, ~$20M/kg. Via <em>Space.com</em>.</li>
+                <li>SpaceNews (2025). "Lunar helium-3: separating market from marketing." Reserves: 100M–1B kg.</li>
+            </ol>
+        </div>
     </section>
 
     <section id="invest" class="hero-small">
@@ -772,22 +775,17 @@ const translations = {
         },
         valuation: {
             title: "Lunar Resource Valuation",
-            subtitle: "Estimated total market value of extractable lunar minerals and elements.",
+            subtitle: "Estimated total reserve values based on published research and market data.",
             table: {
-                resource: "Resource",
-                "2025": "2025",
-                "2035": "2035",
-                "2045": "2045",
-                "2055": "2055",
-                "2065": "2065",
-                "2075": "2075",
-                helium3: "Helium-3",
-                ree: "Rare Earth Elements",
-                titanium: "Titanium",
-                water: "Water Ice",
-                total: "Total Estimated Value"
+                resource: "Resource", low: "Low Est.", mid: "Mid Est.", high: "High Est.", source: "Key Source",
+                helium3: "Helium-3", ree: "Rare Earth Elements", titanium: "Titanium (Ilmenite)", water: "Water Ice",
+                total: "Total Estimated Reserves",
+                he3source: "Schmitt & Kulcinski; Interlune", reesource: "USGS (2025); Metzger (2017)",
+                tisource: "Apollo sample analysis; USGS", watersource: "Sowers et al. (2019); NASA JPL",
+                totalsource: "Average of estimates"
             },
-            note: "Projections based on terrestrial scarcity trends, increased industrial demand, and development of fusion energy technologies. Values represent total extractable reserves, not annual production."
+            note: "Values represent estimated total extractable reserves based on published research, not annual production. Helium-3 valuations assume viable D-³He fusion technology. Range reflects uncertainty in extraction costs and market development.",
+            refs: { title: "References" }
         },
         invest: {
             title: "Capital for the Cosmos",
@@ -904,22 +902,17 @@ const translations = {
         },
         valuation: {
             title: "Verdivurdering av Måneressurser",
-            subtitle: "Estimert total markedsverdi av utvinnbare månemineraler og elementer.",
+            subtitle: "Estimert total reserveverdi basert på publisert forskning og markedsdata.",
             table: {
-                resource: "Ressurs",
-                "2025": "2025",
-                "2035": "2035",
-                "2045": "2045",
-                "2055": "2055",
-                "2065": "2065",
-                "2075": "2075",
-                helium3: "Helium-3",
-                ree: "Sjeldne Jordmetaller",
-                titanium: "Titan",
-                water: "Vannis",
-                total: "Total Estimert Verdi"
+                resource: "Ressurs", low: "Lavt est.", mid: "Middels est.", high: "Høyt est.", source: "Kilde",
+                helium3: "Helium-3", ree: "Sjeldne Jordmetaller", titanium: "Titan (Ilmenitt)", water: "Vannis",
+                total: "Totale Estimerte Reserver",
+                he3source: "Schmitt & Kulcinski; Interlune", reesource: "USGS (2025); Metzger (2017)",
+                tisource: "Apollo-prøveanalyse; USGS", watersource: "Sowers et al. (2019); NASA JPL",
+                totalsource: "Gjennomsnitt av estimater"
             },
-            note: "Anslag basert på terrestrisk knapphets­trender, økt industriell etterspørsel og utvikling av fusjons­energi­teknologier. Verdiene representerer totale utvinnbare reserver, ikke årlig produksjon."
+            note: "Verdiene representerer estimerte totale utvinnbare reserver basert på publisert forskning, ikke årlig produksjon. Helium-3-verdier forutsetter levedyktig D-³He fusjonsteknologi. Spredningen reflekterer usikkerhet i utvinningskostnader og markedsutvikling.",
+            refs: { title: "Referanser" }
         },
         invest: {
             title: "Kapital for Kosmos",
@@ -1036,20 +1029,14 @@ const translations = {
         },
         valuation: {
             title: "Bewertung der Mondressourcen",
-            subtitle: "Geschätzter Gesamtmarktwert abbaubarer lunarer Mineralien und Elemente.",
+            subtitle: "Geschätzter Gesamtreservewert basierend auf veröffentlichter Forschung und Marktdaten.",
             table: {
-                resource: "Ressource",
-                "2025": "2025",
-                "2035": "2035",
-                "2045": "2045",
-                "2055": "2055",
-                "2065": "2065",
-                "2075": "2075",
-                helium3: "Helium-3",
-                ree: "Seltene Erden",
-                titanium: "Titan",
-                water: "Wassereis",
-                total: "Geschätzter Gesamtwert"
+                resource: "Ressource", low: "Niedrig", mid: "Mittel", high: "Hoch", source: "Quelle",
+                helium3: "Helium-3", ree: "Seltene Erden", titanium: "Titan (Ilmenit)", water: "Wassereis",
+                total: "Geschätzte Gesamtreserven",
+                he3source: "Schmitt & Kulcinski; Interlune", reesource: "USGS (2025); Metzger (2017)",
+                tisource: "Apollo-Probenanalyse; USGS", watersource: "Sowers et al. (2019); NASA JPL",
+                totalsource: "Durchschnitt der Schätzungen"
             },
             note: "Prognosen basieren auf terrestrischen Knappheitstrends, gesteigerter industrieller Nachfrage und der Entwicklung von Fusionsenergie­technologien. Werte repräsentieren abbaubare Gesamtreserven, nicht die jährliche Produktion."
         },
@@ -1168,20 +1155,14 @@ const translations = {
         },
         valuation: {
             title: "Värdering av Månresurser",
-            subtitle: "Uppskattat totalt marknadsvärde för utvinningsbara månmineraler och element.",
+            subtitle: "Uppskattat totalt reservvärde baserat på publicerad forskning och marknadsdata.",
             table: {
-                resource: "Resurs",
-                "2025": "2025",
-                "2035": "2035",
-                "2045": "2045",
-                "2055": "2055",
-                "2065": "2065",
-                "2075": "2075",
-                helium3: "Helium-3",
-                ree: "Sällsynta Jordartsmetaller",
-                titanium: "Titan",
-                water: "Vattenis",
-                total: "Totalt Uppskattat Värde"
+                resource: "Resurs", low: "Lågt est.", mid: "Medel est.", high: "Högt est.", source: "Källa",
+                helium3: "Helium-3", ree: "Sällsynta Jordartsmetaller", titanium: "Titan (Ilmenit)", water: "Vattenis",
+                total: "Totala Uppskattade Reserver",
+                he3source: "Schmitt & Kulcinski; Interlune", reesource: "USGS (2025); Metzger (2017)",
+                tisource: "Apollo-provanalys; USGS", watersource: "Sowers et al. (2019); NASA JPL",
+                totalsource: "Genomsnitt av uppskattningar"
             },
             note: "Prognoser baserade på terrestrisk briststrender, ökad industriell efterfrågan och utveckling av fusionsenergi­teknologier. Värdena representerar totala utvinningsbara reserver, inte årlig produktion."
         },
@@ -1300,20 +1281,14 @@ const translations = {
         },
         valuation: {
             title: "Waardering van Maanbronnen",
-            subtitle: "Geschatte totale marktwaarde van winbare maanmineralen en elementen.",
+            subtitle: "Geschatte totale reservewaarde gebaseerd op gepubliceerd onderzoek en marktgegevens.",
             table: {
-                resource: "Hulpbron",
-                "2025": "2025",
-                "2035": "2035",
-                "2045": "2045",
-                "2055": "2055",
-                "2065": "2065",
-                "2075": "2075",
-                helium3: "Helium-3",
-                ree: "Zeldzame Aardmetalen",
-                titanium: "Titanium",
-                water: "Waterijs",
-                total: "Totale Geschatte Waarde"
+                resource: "Hulpbron", low: "Laag", mid: "Midden", high: "Hoog", source: "Bron",
+                helium3: "Helium-3", ree: "Zeldzame Aardmetalen", titanium: "Titanium (Ilmeniet)", water: "Waterijs",
+                total: "Totale Geschatte Reserves",
+                he3source: "Schmitt & Kulcinski; Interlune", reesource: "USGS (2025); Metzger (2017)",
+                tisource: "Apollo-monsteranalyse; USGS", watersource: "Sowers et al. (2019); NASA JPL",
+                totalsource: "Gemiddelde van schattingen"
             },
             note: "Prognoses gebaseerd op terrestrische schaarstettrends, toegenomen industriële vraag en ontwikkeling van fusie-energie­technologieën. Waarden vertegenwoordigen totale winbare reserves, niet jaarlijkse productie."
         },
@@ -1432,22 +1407,17 @@ const translations = {
         },
         valuation: {
             title: "月面資源評価",
-            subtitle: "採掘可能な月面鉱物・元素の推定市場価値総額。",
+            subtitle: "公開された研究と市場データに基づく推定総埋蔵量価値。",
             table: {
-                resource: "資源",
-                "2025": "2025",
-                "2035": "2035",
-                "2045": "2045",
-                "2055": "2055",
-                "2065": "2065",
-                "2075": "2075",
-                helium3: "ヘリウム3",
-                ree: "希土類元素",
-                titanium: "チタン",
-                water: "水氷",
-                total: "推定総価値"
+                resource: "資源", low: "低推定", mid: "中推定", high: "高推定", source: "主要出典",
+                helium3: "ヘリウム3", ree: "希土類元素", titanium: "チタン（イルメナイト）", water: "水氷",
+                total: "推定総埋蔵量",
+                he3source: "Schmitt & Kulcinski; Interlune", reesource: "USGS (2025); Metzger (2017)",
+                tisource: "アポロサンプル分析; USGS", watersource: "Sowers et al. (2019); NASA JPL",
+                totalsource: "推定値の平均"
             },
-            note: "地上での希少性トレンド、産業需要の増大、核融合エネルギー技術の発展に基づく予測。数値は年間生産量ではなく、採掘可能な総埋蔵量を表す。"
+            note: "数値は年間生産量ではなく、公開された研究に基づく採掘可能な推定総埋蔵量を表す。ヘリウム3の評価は実用的なD-³He核融合技術を前提とする。",
+            refs: { title: "参考文献" }
         },
         invest: {
             title: "宇宙のための資本",
