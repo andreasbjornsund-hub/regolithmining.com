@@ -8,70 +8,86 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23888'/><circle cx='35' cy='40' r='8' fill='%23777' opacity='0.6'/><circle cx='60' cy='55' r='12' fill='%23777' opacity='0.5'/><circle cx='50' cy='30' r='5' fill='%23777' opacity='0.4'/><circle cx='70' cy='35' r='4' fill='%23777' opacity='0.5'/></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css?v=3">
-    <link rel="stylesheet" href="blog.css?v=1">
+    <link rel="stylesheet" href="blog.css?v=2">
 </head>
-<body>
-    <a href="/blog/" class="back-link">← All Posts</a>
+<body data-dispatch="dispatch3">
+    <nav class="blog-nav-bar">
+        <a href="/" class="back-link-inline" data-translate="nav.back">← Regolith Mining</a>
+        <div class="blog-nav-right">
+            <a href="/blog/" class="all-posts-link" data-translate="nav.allPosts">All Posts</a>
+            <div class="language-selector">
+                <button class="lang-dropdown-btn" id="langDropdownBtn"><span class="flag">🇬🇧</span><span class="lang-code">EN</span><span class="arrow">▼</span></button>
+                <div class="lang-dropdown-menu" id="langDropdownMenu">
+                    <button class="lang-option" data-lang="en"><span class="flag">🇬🇧</span><span class="lang-name">English</span></button>
+                    <button class="lang-option" data-lang="no"><span class="flag">🇳🇴</span><span class="lang-name">Norsk</span></button>
+                    <button class="lang-option" data-lang="de"><span class="flag">🇩🇪</span><span class="lang-name">Deutsch</span></button>
+                    <button class="lang-option" data-lang="sv"><span class="flag">🇸🇪</span><span class="lang-name">Svenska</span></button>
+                    <button class="lang-option" data-lang="nl"><span class="flag">🇳🇱</span><span class="lang-name">Nederlands</span></button>
+                    <button class="lang-option" data-lang="ja"><span class="flag">🇯🇵</span><span class="lang-name">日本語</span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <section class="article-hero" style="background-image: url('https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=1200&q=80')">
         <div class="article-hero-content">
-            <div class="article-date">Lunar Dispatch #3 — January 20, 2026</div>
-            <h1>2025 in Review — The Year Commercial Lunar Landings Became Real</h1>
-            <p class="article-subtitle">Six landing attempts, two successes, one crash, and a fundamentally changed landscape for lunar resource extraction.</p>
+            <div class="article-date" data-translate="date">Lunar Dispatch #3 — January 20, 2026</div>
+            <h1 data-translate="title">2025 in Review — The Year Commercial Lunar Landings Became Real</h1>
+            <p class="article-subtitle" data-translate="subtitle">Six landing attempts, two successes, one crash, and a fundamentally changed landscape for lunar resource extraction.</p>
         </div>
     </section>
 
     <article class="article-body">
-        <h2>The 2025 Lunar Scoreboard</h2>
-        <p>2025 was the most active year for lunar missions since the Apollo era. Multiple commercial landers reached the surface — some successfully, others less so — but the sheer volume of attempts signals that the infrastructure for a permanent lunar presence is being built in real time.</p>
+        <h2 data-translate="h1">The 2025 Lunar Scoreboard</h2>
+        <p data-translate="p1">2025 was the most active year for lunar missions since the Apollo era. Multiple commercial landers reached the surface — some successfully, others less so — but the sheer volume of attempts signals that the infrastructure for a permanent lunar presence is being built in real time.</p>
         <ul>
-            <li><strong>Firefly Blue Ghost M1</strong> (Mar 2) — Full success. First commercial company to achieve a completely successful soft-landing. 14 days of surface ops, 100% payload objectives met at Mare Crisium.</li>
-            <li><strong>Intuitive Machines IM-2</strong> (Mar 6) — Partial success. Landed near the south pole carrying NASA's PRIME-1 drill experiment, but tipped on its side. Some data returned.</li>
-            <li><strong>ispace Hakuto-R M2</strong> (Jun 6) — Crash. Second failed landing for the Japanese company. Data recovery ongoing.</li>
-            <li><strong>China Chang'e 6</strong> — Successfully returned far-side lunar samples earlier in the year, a world first for the far side.</li>
+            <li data-translate="li1"><strong>Firefly Blue Ghost M1</strong> (Mar 2) — Full success. First commercial company to achieve a completely successful soft-landing. 14 days of surface ops, 100% payload objectives met at Mare Crisium.</li>
+            <li data-translate="li2"><strong>Intuitive Machines IM-2</strong> (Mar 6) — Partial success. Landed near the south pole carrying NASA's PRIME-1 drill experiment, but tipped on its side. Some data returned.</li>
+            <li data-translate="li3"><strong>ispace Hakuto-R M2</strong> (Jun 6) — Crash. Second failed landing for the Japanese company. Data recovery ongoing.</li>
+            <li data-translate="li4"><strong>China Chang'e 6</strong> — Successfully returned far-side lunar samples earlier in the year, a world first for the far side.</li>
         </ul>
-        <p>The pattern is clear: <strong>landing on the Moon is getting normalized, even if it remains difficult</strong>. Each attempt — success or failure — generates engineering data that makes the next one more likely to succeed.</p>
+        <p data-translate="p2">The pattern is clear: <strong>landing on the Moon is getting normalized, even if it remains difficult</strong>. Each attempt — success or failure — generates engineering data that makes the next one more likely to succeed.</p>
 
-        <h2>Artemis II: The Countdown Begins</h2>
-        <p>On January 16, NASA announced that the <strong>Artemis II rocket would roll out to Kennedy Space Center the following day</strong>. The mission — a 10-day crewed flight around the Moon without landing — will be the first time humans have traveled beyond low Earth orbit since Apollo 17 in 1972.</p>
-        <p>Launch is targeted for <strong>early March 2026</strong>. The crew of four will loop around the Moon, testing the Orion spacecraft's life support systems and navigation in deep space. While Artemis II won't land, it's the critical precursor to Artemis III — the mission that will return astronauts to the lunar surface.</p>
+        <h2 data-translate="h2">Artemis II: The Countdown Begins</h2>
+        <p data-translate="p3">On January 16, NASA announced that the <strong>Artemis II rocket would roll out to Kennedy Space Center the following day</strong>. The mission — a 10-day crewed flight around the Moon without landing — will be the first time humans have traveled beyond low Earth orbit since Apollo 17 in 1972.</p>
+        <p data-translate="p4">Launch is targeted for <strong>early March 2026</strong>. The crew of four will loop around the Moon, testing the Orion spacecraft's life support systems and navigation in deep space. While Artemis II won't land, it's the critical precursor to Artemis III — the mission that will return astronauts to the lunar surface.</p>
 
-        <h2>Interlune's Quiet Momentum</h2>
-        <p>While the landing missions grabbed headlines, <strong>Interlune</strong> continued building the most credible lunar mining operation. The company's Helium-3 harvester — tested in parabolic flight and on Earth — is being refined based on 2025 test data. Their multispectral camera, scheduled to launch to the lunar surface in <strong>July 2026</strong>, will characterize regolith composition at prospective mining sites.</p>
-        <p>Interlune also secured a new round of funding, bringing total investment to over $20 million. The company's resource development mission in 2027 remains on track — making it potentially the first dedicated lunar mining mission in history.</p>
+        <h2 data-translate="h3">Interlune's Quiet Momentum</h2>
+        <p data-translate="p5">While the landing missions grabbed headlines, <strong>Interlune</strong> continued building the most credible lunar mining operation. The company's Helium-3 harvester — tested in parabolic flight and on Earth — is being refined based on 2025 test data. Their multispectral camera, scheduled to launch to the lunar surface in <strong>July 2026</strong>, will characterize regolith composition at prospective mining sites.</p>
+        <p data-translate="p6">Interlune also secured a new round of funding, bringing total investment to over $20 million. The company's resource development mission in 2027 remains on track — making it potentially the first dedicated lunar mining mission in history.</p>
 
-        <h2>The Private Lander Pipeline for 2026</h2>
-        <p>The next 12 months promise an even busier lunar calendar:</p>
+        <h2 data-translate="h4">The Private Lander Pipeline for 2026</h2>
+        <p data-translate="p7">The next 12 months promise an even busier lunar calendar:</p>
         <ul>
-            <li><strong>Blue Origin Blue Moon Mark 1</strong> — Uncrewed cargo lander, first flight planned for 2026</li>
-            <li><strong>Intuitive Machines IM-3</strong> — Second half of 2026, carrying international payloads and a lunar data relay satellite</li>
-            <li><strong>SpaceX Starship HLS</strong> — Orbital propellant transfer demo expected 2026, precursor to Artemis III lunar lander</li>
-            <li><strong>China Chang'e 7</strong> — August 2026, targeting the lunar south pole with an orbiter, lander, rover, and flying probe</li>
-            <li><strong>Australia's lunar rover</strong> — 2026, designed to extract oxygen and collect soil</li>
+            <li data-translate="li5"><strong>Blue Origin Blue Moon Mark 1</strong> — Uncrewed cargo lander, first flight planned for 2026</li>
+            <li data-translate="li6"><strong>Intuitive Machines IM-3</strong> — Second half of 2026, carrying international payloads and a lunar data relay satellite</li>
+            <li data-translate="li7"><strong>SpaceX Starship HLS</strong> — Orbital propellant transfer demo expected 2026, precursor to Artemis III lunar lander</li>
+            <li data-translate="li8"><strong>China Chang'e 7</strong> — August 2026, targeting the lunar south pole with an orbiter, lander, rover, and flying probe</li>
+            <li data-translate="li9"><strong>Australia's lunar rover</strong> — 2026, designed to extract oxygen and collect soil</li>
         </ul>
 
-        <h2>What It Means for Mining</h2>
-        <p>Every successful landing reduces the cost per kilogram of delivering equipment to the lunar surface. Every new lander design creates options for where and how mining hardware can be deployed. The 2025 results — even the failures — accelerate the timeline for commercial resource extraction.</p>
-        <p>The bottleneck is no longer <em>"can we get there?"</em> It's shifting to <em>"can we operate continuously once we arrive?"</em> That's a fundamentally different engineering problem, and it's the one the mining industry needs to solve next.</p>
+        <h2 data-translate="h5">What It Means for Mining</h2>
+        <p data-translate="p8">Every successful landing reduces the cost per kilogram of delivering equipment to the lunar surface. Every new lander design creates options for where and how mining hardware can be deployed. The 2025 results — even the failures — accelerate the timeline for commercial resource extraction.</p>
+        <p data-translate="p9">The bottleneck is no longer <em>"can we get there?"</em> It's shifting to <em>"can we operate continuously once we arrive?"</em> That's a fundamentally different engineering problem, and it's the one the mining industry needs to solve next.</p>
 
         <div class="sources">
-            <h3>Sources</h3>
+            <h3 data-translate="sources">Sources</h3>
             <ol>
                 <li>Open Lunar Foundation — <a href="https://www.openlunar.org/blog/2025-lunar-developments" target="_blank">"Achievements and shortfalls in global lunar exploration in 2025"</a>, Jan 2026</li>
-                <li>Wikipedia — <a href="https://en.wikipedia.org/wiki/Artemis_II" target="_blank">"Artemis II"</a> — mission overview and timeline</li>
+                <li>Wikipedia — <a href="https://en.wikipedia.org/wiki/Artemis_II" target="_blank">"Artemis II"</a></li>
                 <li>SpaceNews — <a href="https://spacenews.com/interlune-plans-to-gather-scarce-lunar-helium-3-for-quantum-computing-on-earth/" target="_blank">"Interlune plans to gather scarce lunar Helium-3"</a>, Jan 2025</li>
-                <li>NASA — <a href="https://www.nasa.gov/news-release/nasa-receives-some-data-before-intuitive-machines-ends-lunar-mission/" target="_blank">"NASA Receives Some Data Before Intuitive Machines Ends Lunar Mission"</a>, Mar 2025</li>
+                <li>NASA — <a href="https://www.nasa.gov/news-release/nasa-receives-some-data-before-intuitive-machines-ends-lunar-mission/" target="_blank">"NASA Receives Data from IM-2"</a>, Mar 2025</li>
                 <li>Intuitive Machines — <a href="https://www.intuitivemachines.com/im-3-lunar-mission" target="_blank">"IM-3 Lunar Mission"</a></li>
-                <li>Spaceflight Now — <a href="https://spaceflightnow.com/2025/06/06/ispaces-resilience-lander-crash-lands-on-the-moon/" target="_blank">"ispace's Resilience lander crash lands on the Moon"</a>, Jun 2025</li>
+                <li>Spaceflight Now — <a href="https://spaceflightnow.com/2025/06/06/ispaces-resilience-lander-crash-lands-on-the-moon/" target="_blank">"ispace crash"</a>, Jun 2025</li>
             </ol>
         </div>
     </article>
 
     <nav class="article-nav">
-        <a href="2025-12-lunar-dispatch.html">← December 2025</a>
-        <a href="2026-02-lunar-dispatch.html">February 2026 →</a>
+        <a href="2025-12-lunar-dispatch.html" data-translate="prev">← December 2025</a>
+        <a href="2026-02-lunar-dispatch.html" data-translate="next">February 2026 →</a>
     </nav>
-
     <footer>© 2026 Regolith Mining Corp. All rights reserved.</footer>
+    <script src="blog-translations.js"></script>
 </body>
 </html>
